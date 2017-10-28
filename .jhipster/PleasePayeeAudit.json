@@ -1,0 +1,131 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "pleasePayeeId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "pleasePayeeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pleasePayeeMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "reason",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gatheringName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gatheringNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "useTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accessory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serialNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "establishTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "amendTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "amendPerson",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "submitter",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "submitTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "auditor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditorTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "conditions",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pleasePayeeType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vehicleShelf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "engine",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028042726",
+    "entityTableName": "please_payee_audit",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

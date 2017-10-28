@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "refit",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "refitRecord",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "refitTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "refitUnit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founderTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifierTime",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171028105125",
+    "entityTableName": "gas_refit",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

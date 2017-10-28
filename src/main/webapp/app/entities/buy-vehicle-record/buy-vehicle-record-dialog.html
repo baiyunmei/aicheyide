@@ -1,0 +1,122 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBuyVehicleRecordLabel">Create or edit a Buy Vehicle Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.buyVehicleRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.buyVehicleRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.buyVehicleRecord.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.buyVehicleRecord.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.buyVehicleRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.buyVehicleRecord.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_buyVehicleDate">Buy Vehicle Date</label>
+            <input type="number" class="form-control" name="buyVehicleDate" id="field_buyVehicleDate"
+                    ng-model="vm.buyVehicleRecord.buyVehicleDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.buyVehicleRecord.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleShelf">Vehicle Shelf</label>
+            <input type="text" class="form-control" name="vehicleShelf" id="field_vehicleShelf"
+                    ng-model="vm.buyVehicleRecord.vehicleShelf"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_engine">Engine</label>
+            <input type="text" class="form-control" name="engine" id="field_engine"
+                    ng-model="vm.buyVehicleRecord.engine"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_downPayment">Down Payment</label>
+            <input type="number" class="form-control" name="downPayment" id="field_downPayment"
+                    ng-model="vm.buyVehicleRecord.downPayment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cashPledge">Cash Pledge</label>
+            <input type="number" class="form-control" name="cashPledge" id="field_cashPledge"
+                    ng-model="vm.buyVehicleRecord.cashPledge"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_periods">Periods</label>
+            <input type="number" class="form-control" name="periods" id="field_periods"
+                    ng-model="vm.buyVehicleRecord.periods"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="vm.buyVehicleRecord.amount"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notPeriods">Not Periods</label>
+            <input type="number" class="form-control" name="notPeriods" id="field_notPeriods"
+                    ng-model="vm.buyVehicleRecord.notPeriods"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notAmount">Not Amount</label>
+            <input type="number" class="form-control" name="notAmount" id="field_notAmount"
+                    ng-model="vm.buyVehicleRecord.notAmount"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_postponeTime">Postpone Time</label>
+            <input type="number" class="form-control" name="postponeTime" id="field_postponeTime"
+                    ng-model="vm.buyVehicleRecord.postponeTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdueTiem">Overdue Tiem</label>
+            <input type="number" class="form-control" name="overdueTiem" id="field_overdueTiem"
+                    ng-model="vm.buyVehicleRecord.overdueTiem"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

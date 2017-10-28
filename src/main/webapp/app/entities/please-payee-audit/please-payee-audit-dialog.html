@@ -1,0 +1,206 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPleasePayeeAuditLabel">Create or edit a Please Payee Audit</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pleasePayeeAudit.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pleasePayeeAudit.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.pleasePayeeAudit.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.pleasePayeeAudit.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.pleasePayeeAudit.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptDate">Receipt Date</label>
+            <input type="number" class="form-control" name="receiptDate" id="field_receiptDate"
+                    ng-model="vm.pleasePayeeAudit.receiptDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_pleasePayeeId">Please Payee Id</label>
+            <input type="number" class="form-control" name="pleasePayeeId" id="field_pleasePayeeId"
+                    ng-model="vm.pleasePayeeAudit.pleasePayeeId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_pleasePayeeName">Please Payee Name</label>
+            <input type="text" class="form-control" name="pleasePayeeName" id="field_pleasePayeeName"
+                    ng-model="vm.pleasePayeeAudit.pleasePayeeName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_pleasePayeeMoney">Please Payee Money</label>
+            <input type="number" class="form-control" name="pleasePayeeMoney" id="field_pleasePayeeMoney"
+                    ng-model="vm.pleasePayeeAudit.pleasePayeeMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_reason">Reason</label>
+            <input type="text" class="form-control" name="reason" id="field_reason"
+                    ng-model="vm.pleasePayeeAudit.reason"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_gatheringName">Gathering Name</label>
+            <input type="text" class="form-control" name="gatheringName" id="field_gatheringName"
+                    ng-model="vm.pleasePayeeAudit.gatheringName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_gatheringNumber">Gathering Number</label>
+            <input type="text" class="form-control" name="gatheringNumber" id="field_gatheringNumber"
+                    ng-model="vm.pleasePayeeAudit.gatheringNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_useTime">Use Time</label>
+            <input type="number" class="form-control" name="useTime" id="field_useTime"
+                    ng-model="vm.pleasePayeeAudit.useTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark1">Remark 1</label>
+            <input type="text" class="form-control" name="remark1" id="field_remark1"
+                    ng-model="vm.pleasePayeeAudit.remark1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_accessory">Accessory</label>
+            <input type="text" class="form-control" name="accessory" id="field_accessory"
+                    ng-model="vm.pleasePayeeAudit.accessory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.pleasePayeeAudit.status"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark2">Remark 2</label>
+            <input type="text" class="form-control" name="remark2" id="field_remark2"
+                    ng-model="vm.pleasePayeeAudit.remark2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remit">Remit</label>
+            <input type="text" class="form-control" name="remit" id="field_remit"
+                    ng-model="vm.pleasePayeeAudit.remit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_serialNumber">Serial Number</label>
+            <input type="text" class="form-control" name="serialNumber" id="field_serialNumber"
+                    ng-model="vm.pleasePayeeAudit.serialNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_establishTime">Establish Time</label>
+            <input type="number" class="form-control" name="establishTime" id="field_establishTime"
+                    ng-model="vm.pleasePayeeAudit.establishTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_amendTime">Amend Time</label>
+            <input type="number" class="form-control" name="amendTime" id="field_amendTime"
+                    ng-model="vm.pleasePayeeAudit.amendTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_amendPerson">Amend Person</label>
+            <input type="text" class="form-control" name="amendPerson" id="field_amendPerson"
+                    ng-model="vm.pleasePayeeAudit.amendPerson"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_submitter">Submitter</label>
+            <input type="text" class="form-control" name="submitter" id="field_submitter"
+                    ng-model="vm.pleasePayeeAudit.submitter"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_submitTime">Submit Time</label>
+            <input type="number" class="form-control" name="submitTime" id="field_submitTime"
+                    ng-model="vm.pleasePayeeAudit.submitTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditor">Auditor</label>
+            <input type="text" class="form-control" name="auditor" id="field_auditor"
+                    ng-model="vm.pleasePayeeAudit.auditor"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditorTime">Auditor Time</label>
+            <input type="number" class="form-control" name="auditorTime" id="field_auditorTime"
+                    ng-model="vm.pleasePayeeAudit.auditorTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_conditions">Conditions</label>
+            <input type="number" class="form-control" name="conditions" id="field_conditions"
+                    ng-model="vm.pleasePayeeAudit.conditions"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_pleasePayeeType">Please Payee Type</label>
+            <input type="text" class="form-control" name="pleasePayeeType" id="field_pleasePayeeType"
+                    ng-model="vm.pleasePayeeAudit.pleasePayeeType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleShelf">Vehicle Shelf</label>
+            <input type="text" class="form-control" name="vehicleShelf" id="field_vehicleShelf"
+                    ng-model="vm.pleasePayeeAudit.vehicleShelf"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_engine">Engine</label>
+            <input type="text" class="form-control" name="engine" id="field_engine"
+                    ng-model="vm.pleasePayeeAudit.engine"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.pleasePayeeAudit.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.pleasePayeeAudit.driverName"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

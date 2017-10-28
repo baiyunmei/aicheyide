@@ -1,0 +1,74 @@
+<div>
+    <h2>Authorization Records</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="authorization-record.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Authorization Record
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contractNumbering"><span>Contract Numbering</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="purchaseDate"><span>Purchase Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationStartDate"><span>Authorization Start Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationFinishDate"><span>Authorization Finish Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationType"><span>Authorization Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationId"><span>Authorization Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="authorizationRecord in vm.authorizationRecords track by authorizationRecord.id">
+                    <td><a ui-sref="authorization-record-detail({id:authorizationRecord.id})">{{authorizationRecord.id}}</a></td>
+                    <td>{{authorizationRecord.contractNumbering}}</td>
+                    <td>{{authorizationRecord.companyId}}</td>
+                    <td>{{authorizationRecord.purchaseDate}}</td>
+                    <td>{{authorizationRecord.authorizationStartDate}}</td>
+                    <td>{{authorizationRecord.authorizationFinishDate}}</td>
+                    <td>{{authorizationRecord.authorizationType}}</td>
+                    <td>{{authorizationRecord.remark}}</td>
+                    <td>{{authorizationRecord.authorizationId}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="authorization-record-detail({id:authorizationRecord.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="authorization-record.edit({id:authorizationRecord.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="authorization-record.delete({id:authorizationRecord.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

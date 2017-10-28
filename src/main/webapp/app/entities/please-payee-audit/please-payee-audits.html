@@ -1,0 +1,118 @@
+<div>
+    <h2>Please Payee Audits</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="please-payee-audit.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Please Payee Audit
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptDate"><span>Receipt Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pleasePayeeId"><span>Please Payee Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pleasePayeeName"><span>Please Payee Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pleasePayeeMoney"><span>Please Payee Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="reason"><span>Reason</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gatheringName"><span>Gathering Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gatheringNumber"><span>Gathering Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="useTime"><span>Use Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark1"><span>Remark 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="accessory"><span>Accessory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark2"><span>Remark 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remit"><span>Remit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="serialNumber"><span>Serial Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="establishTime"><span>Establish Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="amendTime"><span>Amend Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="amendPerson"><span>Amend Person</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="submitter"><span>Submitter</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="submitTime"><span>Submit Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditor"><span>Auditor</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditorTime"><span>Auditor Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="conditions"><span>Conditions</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pleasePayeeType"><span>Please Payee Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleShelf"><span>Vehicle Shelf</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="engine"><span>Engine</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pleasePayeeAudit in vm.pleasePayeeAudits track by pleasePayeeAudit.id">
+                    <td><a ui-sref="please-payee-audit-detail({id:pleasePayeeAudit.id})">{{pleasePayeeAudit.id}}</a></td>
+                    <td>{{pleasePayeeAudit.companyId}}</td>
+                    <td>{{pleasePayeeAudit.orderId}}</td>
+                    <td>{{pleasePayeeAudit.receiptNumber}}</td>
+                    <td>{{pleasePayeeAudit.receiptDate}}</td>
+                    <td>{{pleasePayeeAudit.pleasePayeeId}}</td>
+                    <td>{{pleasePayeeAudit.pleasePayeeName}}</td>
+                    <td>{{pleasePayeeAudit.pleasePayeeMoney}}</td>
+                    <td>{{pleasePayeeAudit.reason}}</td>
+                    <td>{{pleasePayeeAudit.gatheringName}}</td>
+                    <td>{{pleasePayeeAudit.gatheringNumber}}</td>
+                    <td>{{pleasePayeeAudit.useTime}}</td>
+                    <td>{{pleasePayeeAudit.remark1}}</td>
+                    <td>{{pleasePayeeAudit.accessory}}</td>
+                    <td>{{pleasePayeeAudit.status}}</td>
+                    <td>{{pleasePayeeAudit.remark2}}</td>
+                    <td>{{pleasePayeeAudit.remit}}</td>
+                    <td>{{pleasePayeeAudit.serialNumber}}</td>
+                    <td>{{pleasePayeeAudit.establishTime}}</td>
+                    <td>{{pleasePayeeAudit.amendTime}}</td>
+                    <td>{{pleasePayeeAudit.amendPerson}}</td>
+                    <td>{{pleasePayeeAudit.submitter}}</td>
+                    <td>{{pleasePayeeAudit.submitTime}}</td>
+                    <td>{{pleasePayeeAudit.auditor}}</td>
+                    <td>{{pleasePayeeAudit.auditorTime}}</td>
+                    <td>{{pleasePayeeAudit.conditions}}</td>
+                    <td>{{pleasePayeeAudit.pleasePayeeType}}</td>
+                    <td>{{pleasePayeeAudit.vehicleShelf}}</td>
+                    <td>{{pleasePayeeAudit.engine}}</td>
+                    <td>{{pleasePayeeAudit.driverId}}</td>
+                    <td>{{pleasePayeeAudit.driverName}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="please-payee-audit-detail({id:pleasePayeeAudit.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="please-payee-audit.edit({id:pleasePayeeAudit.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="please-payee-audit.delete({id:pleasePayeeAudit.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

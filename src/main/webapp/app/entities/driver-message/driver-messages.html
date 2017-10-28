@@ -1,0 +1,102 @@
+<div>
+    <h2>Driver Messages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="driver-message.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Driver Message
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="certificateType"><span>Certificate Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="certificatePhone"><span>Certificate Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bormDate"><span>Borm Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sex"><span>Sex</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="marriageStatus"><span>Marriage Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span>Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="educationDegree"><span>Education Degree</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="registered"><span>Registered</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="censusRegister"><span>Census Register</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="housingType"><span>Housing Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contactAddress"><span>Contact Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="houseLoan"><span>House Loan</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deadline"><span>Deadline</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="monthly"><span>Monthly</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="residentialAddress"><span>Residential Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dwellTime"><span>Dwell Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="identityFront"><span>Identity Front</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="identityReverse"><span>Identity Reverse</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="drivingFront"><span>Driving Front</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="drivingReverse"><span>Driving Reverse</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driverMessage in vm.driverMessages track by driverMessage.id">
+                    <td><a ui-sref="driver-message-detail({id:driverMessage.id})">{{driverMessage.id}}</a></td>
+                    <td>{{driverMessage.companyId}}</td>
+                    <td>{{driverMessage.certificateType}}</td>
+                    <td>{{driverMessage.certificatePhone}}</td>
+                    <td>{{driverMessage.driverName}}</td>
+                    <td>{{driverMessage.bormDate}}</td>
+                    <td>{{driverMessage.sex}}</td>
+                    <td>{{driverMessage.marriageStatus}}</td>
+                    <td>{{driverMessage.phone}}</td>
+                    <td>{{driverMessage.educationDegree}}</td>
+                    <td>{{driverMessage.registered}}</td>
+                    <td>{{driverMessage.censusRegister}}</td>
+                    <td>{{driverMessage.housingType}}</td>
+                    <td>{{driverMessage.contactAddress}}</td>
+                    <td>{{driverMessage.houseLoan}}</td>
+                    <td>{{driverMessage.deadline}}</td>
+                    <td>{{driverMessage.monthly}}</td>
+                    <td>{{driverMessage.residentialAddress}}</td>
+                    <td>{{driverMessage.dwellTime}}</td>
+                    <td>{{driverMessage.identityFront}}</td>
+                    <td>{{driverMessage.identityReverse}}</td>
+                    <td>{{driverMessage.drivingFront}}</td>
+                    <td>{{driverMessage.drivingReverse}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="driver-message-detail({id:driverMessage.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-message.edit({id:driverMessage.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-message.delete({id:driverMessage.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

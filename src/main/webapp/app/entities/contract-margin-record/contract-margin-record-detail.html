@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Contract Margin Record</span> {{vm.contractMarginRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.driverName}}</span>
+        </dd>
+        <dt><span>Payment Time</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.paymentTime}}</span>
+        </dd>
+        <dt><span>Payment Way</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.paymentWay}}</span>
+        </dd>
+        <dt><span>Payment Money</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.paymentMoney}}</span>
+        </dd>
+        <dt><span>Payment Status</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.paymentStatus}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.contractMarginRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="contract-margin-record-detail.edit({id:vm.contractMarginRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

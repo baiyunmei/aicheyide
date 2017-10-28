@@ -1,0 +1,63 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "settleType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "deductMarks",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fine",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "pending",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171028030828",
+    "entityTableName": "settle_apply",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "contractNumbering",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "video",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "credit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apply",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "special",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028031857",
+    "entityTableName": "formal_contract",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

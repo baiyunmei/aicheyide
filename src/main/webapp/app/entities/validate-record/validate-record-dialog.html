@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myValidateRecordLabel">Create or edit a Validate Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.validateRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.validateRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.validateRecord.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.validateRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.validateRecord.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.validateRecord.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptDate">Receipt Date</label>
+            <input type="number" class="form-control" name="receiptDate" id="field_receiptDate"
+                    ng-model="vm.validateRecord.receiptDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operatingDate">Operating Date</label>
+            <input type="number" class="form-control" name="operatingDate" id="field_operatingDate"
+                    ng-model="vm.validateRecord.operatingDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.validateRecord.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_validateTime">Validate Time</label>
+            <input type="number" class="form-control" name="validateTime" id="field_validateTime"
+                    ng-model="vm.validateRecord.validateTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_kilometre">Kilometre</label>
+            <input type="number" class="form-control" name="kilometre" id="field_kilometre"
+                    ng-model="vm.validateRecord.kilometre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_damage">Damage</label>
+            <input type="number" class="form-control" name="damage" id="field_damage"
+                    ng-model="vm.validateRecord.damage"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_describes">Describes</label>
+            <input type="text" class="form-control" name="describes" id="field_describes"
+                    ng-model="vm.validateRecord.describes"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_damagepIcture">Damagep Icture</label>
+            <input type="text" class="form-control" name="damagepIcture" id="field_damagepIcture"
+                    ng-model="vm.validateRecord.damagepIcture"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.validateRecord.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

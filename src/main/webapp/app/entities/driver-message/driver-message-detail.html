@@ -1,0 +1,107 @@
+
+<div>
+    <h2><span>Driver Message</span> {{vm.driverMessage.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.companyId}}</span>
+        </dd>
+        <dt><span>Certificate Type</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.certificateType}}</span>
+        </dd>
+        <dt><span>Certificate Phone</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.certificatePhone}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.driverName}}</span>
+        </dd>
+        <dt><span>Borm Date</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.bormDate}}</span>
+        </dd>
+        <dt><span>Sex</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.sex}}</span>
+        </dd>
+        <dt><span>Marriage Status</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.marriageStatus}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.phone}}</span>
+        </dd>
+        <dt><span>Education Degree</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.educationDegree}}</span>
+        </dd>
+        <dt><span>Registered</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.registered}}</span>
+        </dd>
+        <dt><span>Census Register</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.censusRegister}}</span>
+        </dd>
+        <dt><span>Housing Type</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.housingType}}</span>
+        </dd>
+        <dt><span>Contact Address</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.contactAddress}}</span>
+        </dd>
+        <dt><span>House Loan</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.houseLoan}}</span>
+        </dd>
+        <dt><span>Deadline</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.deadline}}</span>
+        </dd>
+        <dt><span>Monthly</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.monthly}}</span>
+        </dd>
+        <dt><span>Residential Address</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.residentialAddress}}</span>
+        </dd>
+        <dt><span>Dwell Time</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.dwellTime}}</span>
+        </dd>
+        <dt><span>Identity Front</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.identityFront}}</span>
+        </dd>
+        <dt><span>Identity Reverse</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.identityReverse}}</span>
+        </dd>
+        <dt><span>Driving Front</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.drivingFront}}</span>
+        </dd>
+        <dt><span>Driving Reverse</span></dt>
+        <dd>
+            <span>{{vm.driverMessage.drivingReverse}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="driver-message-detail.edit({id:vm.driverMessage.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

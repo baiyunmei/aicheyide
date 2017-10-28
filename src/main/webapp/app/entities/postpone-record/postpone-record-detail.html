@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Postpone Record</span> {{vm.postponeRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Operation Time</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.operationTime}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.driverName}}</span>
+        </dd>
+        <dt><span>Postpone Data</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.postponeData}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.postponeRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="postpone-record-detail.edit({id:vm.postponeRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,96 @@
+<div>
+    <h2>Retreat Deposits</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="retreat-deposit.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Retreat Deposit
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refundTime"><span>Refund Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="money"><span>Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="source"><span>Source</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pledgeStatus"><span>Pledge Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptDate"><span>Receipt Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nextRentTime"><span>Next Rent Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founder"><span>Founder</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founderTime"><span>Founder Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifier"><span>Modifier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifierTime"><span>Modifier Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="whetherRefund"><span>Whether Refund</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="retreatDeposit in vm.retreatDeposits track by retreatDeposit.id">
+                    <td><a ui-sref="retreat-deposit-detail({id:retreatDeposit.id})">{{retreatDeposit.id}}</a></td>
+                    <td>{{retreatDeposit.driverId}}</td>
+                    <td>{{retreatDeposit.orderId}}</td>
+                    <td>{{retreatDeposit.companyId}}</td>
+                    <td>{{retreatDeposit.vehicleId}}</td>
+                    <td>{{retreatDeposit.plateNumber}}</td>
+                    <td>{{retreatDeposit.driverName}}</td>
+                    <td>{{retreatDeposit.refundTime}}</td>
+                    <td>{{retreatDeposit.money}}</td>
+                    <td>{{retreatDeposit.source}}</td>
+                    <td>{{retreatDeposit.pledgeStatus}}</td>
+                    <td>{{retreatDeposit.remark}}</td>
+                    <td>{{retreatDeposit.receiptNumber}}</td>
+                    <td>{{retreatDeposit.receiptDate}}</td>
+                    <td>{{retreatDeposit.nextRentTime}}</td>
+                    <td>{{retreatDeposit.founder}}</td>
+                    <td>{{retreatDeposit.founderTime}}</td>
+                    <td>{{retreatDeposit.modifier}}</td>
+                    <td>{{retreatDeposit.modifierTime}}</td>
+                    <td>{{retreatDeposit.whetherRefund}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="retreat-deposit-detail({id:retreatDeposit.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="retreat-deposit.edit({id:retreatDeposit.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="retreat-deposit.delete({id:retreatDeposit.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

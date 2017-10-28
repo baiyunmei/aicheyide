@@ -1,0 +1,74 @@
+<div>
+    <h2>Driver Emergency Contacts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="driver-emergency-contact.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Driver Emergency Contact
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name1"><span>Name 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="residentialAddress1"><span>Residential Address 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone1"><span>Phone 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="relation1"><span>Relation 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name2"><span>Name 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="residentialAddress2"><span>Residential Address 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone2"><span>Phone 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="relation2"><span>Relation 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driverEmergencyContact in vm.driverEmergencyContacts track by driverEmergencyContact.id">
+                    <td><a ui-sref="driver-emergency-contact-detail({id:driverEmergencyContact.id})">{{driverEmergencyContact.id}}</a></td>
+                    <td>{{driverEmergencyContact.name1}}</td>
+                    <td>{{driverEmergencyContact.residentialAddress1}}</td>
+                    <td>{{driverEmergencyContact.phone1}}</td>
+                    <td>{{driverEmergencyContact.relation1}}</td>
+                    <td>{{driverEmergencyContact.name2}}</td>
+                    <td>{{driverEmergencyContact.residentialAddress2}}</td>
+                    <td>{{driverEmergencyContact.phone2}}</td>
+                    <td>{{driverEmergencyContact.relation2}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="driver-emergency-contact-detail({id:driverEmergencyContact.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-emergency-contact.edit({id:driverEmergencyContact.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-emergency-contact.delete({id:driverEmergencyContact.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

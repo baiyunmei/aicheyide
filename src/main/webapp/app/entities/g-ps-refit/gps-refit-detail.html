@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span>GPS Refit</span> {{vm.gPSRefit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.driverId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.vehicleId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.receiptDate}}</span>
+        </dd>
+        <dt><span>Operating Date</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.operatingDate}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.plateNumber}}</span>
+        </dd>
+        <dt><span>Validate Time</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.validateTime}}</span>
+        </dd>
+        <dt><span>Kilometre</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.kilometre}}</span>
+        </dd>
+        <dt><span>Damage</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.damage}}</span>
+        </dd>
+        <dt><span>Describes</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.describes}}</span>
+        </dd>
+        <dt><span>Damagep Icture</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.damagepIcture}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.gPSRefit.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="gps-refit-detail.edit({id:vm.gPSRefit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

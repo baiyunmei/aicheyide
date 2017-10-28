@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "departmentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "postName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "staffing",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "inEmployee",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fromEmployee",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171026114133",
+    "entityTableName": "post",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span>Buy Vehicle Record</span> {{vm.buyVehicleRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Buy Vehicle Date</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.buyVehicleDate}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Vehicle Shelf</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.vehicleShelf}}</span>
+        </dd>
+        <dt><span>Engine</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.engine}}</span>
+        </dd>
+        <dt><span>Down Payment</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.downPayment}}</span>
+        </dd>
+        <dt><span>Cash Pledge</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.cashPledge}}</span>
+        </dd>
+        <dt><span>Periods</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.periods}}</span>
+        </dd>
+        <dt><span>Amount</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.amount}}</span>
+        </dd>
+        <dt><span>Not Periods</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.notPeriods}}</span>
+        </dd>
+        <dt><span>Not Amount</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.notAmount}}</span>
+        </dd>
+        <dt><span>Postpone Time</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.postponeTime}}</span>
+        </dd>
+        <dt><span>Overdue Tiem</span></dt>
+        <dd>
+            <span>{{vm.buyVehicleRecord.overdueTiem}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="buy-vehicle-record-detail.edit({id:vm.buyVehicleRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

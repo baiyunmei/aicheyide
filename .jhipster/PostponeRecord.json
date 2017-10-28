@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "operationTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postponeData",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027061222",
+    "entityTableName": "postpone_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

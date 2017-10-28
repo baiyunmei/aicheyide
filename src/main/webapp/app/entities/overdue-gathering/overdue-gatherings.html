@@ -1,0 +1,100 @@
+<div>
+    <h2>Overdue Gatherings</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="overdue-gathering.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Overdue Gathering
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="repaymentTime"><span>Repayment Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="overdueAwait"><span>Overdue Await</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="overdueInterest"><span>Overdue Interest</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="overdueData"><span>Overdue Data</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="total"><span>Total</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptDate"><span>Receipt Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="practicalMoney"><span>Practical Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentWay"><span>Payment Way</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark1"><span>Remark 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founder"><span>Founder</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founderTime"><span>Founder Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifier"><span>Modifier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifierTime"><span>Modifier Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gathering"><span>Gathering</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gatherTime"><span>Gather Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark2"><span>Remark 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="overdueGathering in vm.overdueGatherings track by overdueGathering.id">
+                    <td><a ui-sref="overdue-gathering-detail({id:overdueGathering.id})">{{overdueGathering.id}}</a></td>
+                    <td>{{overdueGathering.driverId}}</td>
+                    <td>{{overdueGathering.orderId}}</td>
+                    <td>{{overdueGathering.companyId}}</td>
+                    <td>{{overdueGathering.vehicleId}}</td>
+                    <td>{{overdueGathering.repaymentTime}}</td>
+                    <td>{{overdueGathering.overdueAwait}}</td>
+                    <td>{{overdueGathering.overdueInterest}}</td>
+                    <td>{{overdueGathering.overdueData}}</td>
+                    <td>{{overdueGathering.total}}</td>
+                    <td>{{overdueGathering.receiptNumber}}</td>
+                    <td>{{overdueGathering.receiptDate}}</td>
+                    <td>{{overdueGathering.practicalMoney}}</td>
+                    <td>{{overdueGathering.paymentWay}}</td>
+                    <td>{{overdueGathering.remark1}}</td>
+                    <td>{{overdueGathering.founder}}</td>
+                    <td>{{overdueGathering.founderTime}}</td>
+                    <td>{{overdueGathering.modifier}}</td>
+                    <td>{{overdueGathering.modifierTime}}</td>
+                    <td>{{overdueGathering.gathering}}</td>
+                    <td>{{overdueGathering.gatherTime}}</td>
+                    <td>{{overdueGathering.remark2}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="overdue-gathering-detail({id:overdueGathering.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="overdue-gathering.edit({id:overdueGathering.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="overdue-gathering.delete({id:overdueGathering.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Receive Vehicle</span> {{vm.receiveVehicle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.vehicleId}}</span>
+        </dd>
+        <dt><span>Inform Vehicle Time</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.informVehicleTime}}</span>
+        </dd>
+        <dt><span>Inform Data</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.informData}}</span>
+        </dd>
+        <dt><span>Inform Vehicle Date</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.informVehicleDate}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.remark}}</span>
+        </dd>
+        <dt><span>Park Warehouse</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.parkWarehouse}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.receiveVehicle.modifierTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="receive-vehicle-detail.edit({id:vm.receiveVehicle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

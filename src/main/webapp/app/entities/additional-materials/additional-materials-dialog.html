@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAdditionalMaterialsLabel">Create or edit a Additional Materials</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.additionalMaterials.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.additionalMaterials.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.additionalMaterials.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_registered">Registered</label>
+            <input type="text" class="form-control" name="registered" id="field_registered"
+                    ng-model="vm.additionalMaterials.registered"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_marriage">Marriage</label>
+            <input type="text" class="form-control" name="marriage" id="field_marriage"
+                    ng-model="vm.additionalMaterials.marriage"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_site">Site</label>
+            <input type="text" class="form-control" name="site" id="field_site"
+                    ng-model="vm.additionalMaterials.site"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_communicate">Communicate</label>
+            <input type="text" class="form-control" name="communicate" id="field_communicate"
+                    ng-model="vm.additionalMaterials.communicate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agreement">Agreement</label>
+            <input type="text" class="form-control" name="agreement" id="field_agreement"
+                    ng-model="vm.additionalMaterials.agreement"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bankCard">Bank Card</label>
+            <input type="text" class="form-control" name="bankCard" id="field_bankCard"
+                    ng-model="vm.additionalMaterials.bankCard"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

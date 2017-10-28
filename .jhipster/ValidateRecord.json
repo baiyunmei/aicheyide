@@ -1,0 +1,63 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "operatingDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "validateTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "kilometre",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "damage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "describes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "damagepIcture",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028104042",
+    "entityTableName": "validate_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

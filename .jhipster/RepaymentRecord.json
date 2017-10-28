@@ -1,0 +1,67 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "repaymentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "money",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "overdue",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "periods",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nextMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "nextDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "operationTime",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171027060416",
+    "entityTableName": "repayment_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

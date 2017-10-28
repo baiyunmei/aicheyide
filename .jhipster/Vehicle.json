@@ -1,0 +1,63 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "engine",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vehicleShelf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vehicleColour",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "stopLocation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brandType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "company",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vehicleType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028113058",
+    "entityTableName": "vehicle",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

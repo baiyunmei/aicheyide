@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span>Forced Settle</span> {{vm.forcedSettle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.companyId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.driverName}}</span>
+        </dd>
+        <dt><span>Periods</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.periods}}</span>
+        </dd>
+        <dt><span>Sum Money</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.sumMoney}}</span>
+        </dd>
+        <dt><span>Not Periods</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.notPeriods}}</span>
+        </dd>
+        <dt><span>Not Money</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.notMoney}}</span>
+        </dd>
+        <dt><span>Settle Type</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.settleType}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.receiptDate}}</span>
+        </dd>
+        <dt><span>Whether Recycle</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.whetherRecycle}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.remark}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.forcedSettle.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="forced-settle-detail.edit({id:vm.forcedSettle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDepositContractLabel">Create or edit a Deposit Contract</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.depositContract.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.depositContract.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.depositContract.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.depositContract.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditResult">Audit Result</label>
+            <input type="text" class="form-control" name="auditResult" id="field_auditResult"
+                    ng-model="vm.depositContract.auditResult"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_audit">Audit</label>
+            <input type="text" class="form-control" name="audit" id="field_audit"
+                    ng-model="vm.depositContract.audit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditId">Audit Id</label>
+            <input type="number" class="form-control" name="auditId" id="field_auditId"
+                    ng-model="vm.depositContract.auditId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditTime">Audit Time</label>
+            <input type="number" class="form-control" name="auditTime" id="field_auditTime"
+                    ng-model="vm.depositContract.auditTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.depositContract.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

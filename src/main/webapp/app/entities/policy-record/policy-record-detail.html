@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Policy Record</span> {{vm.policyRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Vi Begin Date</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.viBeginDate}}</span>
+        </dd>
+        <dt><span>Vi Finish Date</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.viFinishDate}}</span>
+        </dd>
+        <dt><span>Ci Begin Date</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.ciBeginDate}}</span>
+        </dd>
+        <dt><span>Ci Finish Date</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.ciFinishDate}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.policyRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="policy-record-detail.edit({id:vm.policyRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

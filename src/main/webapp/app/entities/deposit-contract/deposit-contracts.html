@@ -1,0 +1,72 @@
+<div>
+    <h2>Deposit Contracts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="deposit-contract.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Deposit Contract
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditResult"><span>Audit Result</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="audit"><span>Audit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditId"><span>Audit Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditTime"><span>Audit Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="depositContract in vm.depositContracts track by depositContract.id">
+                    <td><a ui-sref="deposit-contract-detail({id:depositContract.id})">{{depositContract.id}}</a></td>
+                    <td>{{depositContract.orderId}}</td>
+                    <td>{{depositContract.driverId}}</td>
+                    <td>{{depositContract.auditResult}}</td>
+                    <td>{{depositContract.audit}}</td>
+                    <td>{{depositContract.auditId}}</td>
+                    <td>{{depositContract.auditTime}}</td>
+                    <td>{{depositContract.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="deposit-contract-detail({id:depositContract.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="deposit-contract.edit({id:depositContract.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="deposit-contract.delete({id:depositContract.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

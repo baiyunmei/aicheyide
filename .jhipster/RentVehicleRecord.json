@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contractStartDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "contractEndDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "monthlyRent",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "cashPledge",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171027054902",
+    "entityTableName": "rent_vehicle_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

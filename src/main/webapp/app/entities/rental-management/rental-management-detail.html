@@ -1,0 +1,91 @@
+
+<div>
+    <h2><span>Rental Management</span> {{vm.rentalManagement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.driverId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.orderId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.vehicleId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.driverName}}</span>
+        </dd>
+        <dt><span>Rent Time</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.rentTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.money}}</span>
+        </dd>
+        <dt><span>Overdue</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.overdue}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.remark}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.receiptDate}}</span>
+        </dd>
+        <dt><span>Next Rent Time</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.nextRentTime}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.modifierTime}}</span>
+        </dd>
+        <dt><span>Whether Gather</span></dt>
+        <dd>
+            <span>{{vm.rentalManagement.whetherGather}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="rental-management-detail.edit({id:vm.rentalManagement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

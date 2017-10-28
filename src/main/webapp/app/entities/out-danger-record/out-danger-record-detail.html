@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span>Out Danger Record</span> {{vm.outDangerRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.driverName}}</span>
+        </dd>
+        <dt><span>Come Time</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.comeTime}}</span>
+        </dd>
+        <dt><span>Responsible Party</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.responsibleParty}}</span>
+        </dd>
+        <dt><span>One Money</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.oneMoney}}</span>
+        </dd>
+        <dt><span>Three Money</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.threeMoney}}</span>
+        </dd>
+        <dt><span>Repair Factory</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.repairFactory}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.outDangerRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="out-danger-record-detail.edit({id:vm.outDangerRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

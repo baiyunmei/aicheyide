@@ -1,0 +1,103 @@
+
+<div>
+    <h2><span>Overdue Gathering</span> {{vm.overdueGathering.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.driverId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.orderId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.vehicleId}}</span>
+        </dd>
+        <dt><span>Repayment Time</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.repaymentTime}}</span>
+        </dd>
+        <dt><span>Overdue Await</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.overdueAwait}}</span>
+        </dd>
+        <dt><span>Overdue Interest</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.overdueInterest}}</span>
+        </dd>
+        <dt><span>Overdue Data</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.overdueData}}</span>
+        </dd>
+        <dt><span>Total</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.total}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.receiptDate}}</span>
+        </dd>
+        <dt><span>Practical Money</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.practicalMoney}}</span>
+        </dd>
+        <dt><span>Payment Way</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.paymentWay}}</span>
+        </dd>
+        <dt><span>Remark 1</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.remark1}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.modifierTime}}</span>
+        </dd>
+        <dt><span>Gathering</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.gathering}}</span>
+        </dd>
+        <dt><span>Gather Time</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.gatherTime}}</span>
+        </dd>
+        <dt><span>Remark 2</span></dt>
+        <dd>
+            <span>{{vm.overdueGathering.remark2}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="overdue-gathering-detail.edit({id:vm.overdueGathering.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

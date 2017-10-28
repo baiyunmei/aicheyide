@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span>Settle Apply</span> {{vm.settleApply.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.settleApply.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.settleApply.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.settleApply.companyId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.settleApply.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.settleApply.driverName}}</span>
+        </dd>
+        <dt><span>Settle Type</span></dt>
+        <dd>
+            <span>{{vm.settleApply.settleType}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.settleApply.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.settleApply.receiptDate}}</span>
+        </dd>
+        <dt><span>Deduct Marks</span></dt>
+        <dd>
+            <span>{{vm.settleApply.deductMarks}}</span>
+        </dd>
+        <dt><span>Fine</span></dt>
+        <dd>
+            <span>{{vm.settleApply.fine}}</span>
+        </dd>
+        <dt><span>Pending</span></dt>
+        <dd>
+            <span>{{vm.settleApply.pending}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.settleApply.remark}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.settleApply.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="settle-apply-detail.edit({id:vm.settleApply.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Authorization Record</span> {{vm.authorizationRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Contract Numbering</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.contractNumbering}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.companyId}}</span>
+        </dd>
+        <dt><span>Purchase Date</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.purchaseDate}}</span>
+        </dd>
+        <dt><span>Authorization Start Date</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.authorizationStartDate}}</span>
+        </dd>
+        <dt><span>Authorization Finish Date</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.authorizationFinishDate}}</span>
+        </dd>
+        <dt><span>Authorization Type</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.authorizationType}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.remark}}</span>
+        </dd>
+        <dt><span>Authorization Id</span></dt>
+        <dd>
+            <span>{{vm.authorizationRecord.authorizationId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="authorization-record-detail.edit({id:vm.authorizationRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

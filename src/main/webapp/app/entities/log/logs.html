@@ -1,0 +1,76 @@
+<div>
+    <h2>Logs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="log.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Log
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operatingType"><span>Operating Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operator"><span>Operator</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="departmentId"><span>Department Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operatorId"><span>Operator Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ip"><span>Ip</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="role"><span>Role</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operatingDate"><span>Operating Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="log in vm.logs track by log.id">
+                    <td><a ui-sref="log-detail({id:log.id})">{{log.id}}</a></td>
+                    <td>{{log.operatingType}}</td>
+                    <td>{{log.operator}}</td>
+                    <td>{{log.companyId}}</td>
+                    <td>{{log.departmentId}}</td>
+                    <td>{{log.operatorId}}</td>
+                    <td>{{log.ip}}</td>
+                    <td>{{log.role}}</td>
+                    <td>{{log.operatingDate}}</td>
+                    <td>{{log.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="log-detail({id:log.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="log.edit({id:log.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="log.delete({id:log.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

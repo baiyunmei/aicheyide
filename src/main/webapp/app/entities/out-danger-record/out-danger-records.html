@@ -1,0 +1,82 @@
+<div>
+    <h2>Out Danger Records</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="out-danger-record.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Out Danger Record
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="comeTime"><span>Come Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="responsibleParty"><span>Responsible Party</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="oneMoney"><span>One Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="threeMoney"><span>Three Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="repairFactory"><span>Repair Factory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="outDangerRecord in vm.outDangerRecords track by outDangerRecord.id">
+                    <td><a ui-sref="out-danger-record-detail({id:outDangerRecord.id})">{{outDangerRecord.id}}</a></td>
+                    <td>{{outDangerRecord.driverId}}</td>
+                    <td>{{outDangerRecord.vehicleId}}</td>
+                    <td>{{outDangerRecord.companyId}}</td>
+                    <td>{{outDangerRecord.receiptNumber}}</td>
+                    <td>{{outDangerRecord.plateNumber}}</td>
+                    <td>{{outDangerRecord.driverName}}</td>
+                    <td>{{outDangerRecord.comeTime}}</td>
+                    <td>{{outDangerRecord.responsibleParty}}</td>
+                    <td>{{outDangerRecord.oneMoney}}</td>
+                    <td>{{outDangerRecord.threeMoney}}</td>
+                    <td>{{outDangerRecord.repairFactory}}</td>
+                    <td>{{outDangerRecord.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="out-danger-record-detail({id:outDangerRecord.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="out-danger-record.edit({id:outDangerRecord.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="out-danger-record.delete({id:outDangerRecord.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

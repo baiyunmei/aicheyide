@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLogLabel">Create or edit a Log</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.log.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.log.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operatingType">Operating Type</label>
+            <input type="text" class="form-control" name="operatingType" id="field_operatingType"
+                    ng-model="vm.log.operatingType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operator">Operator</label>
+            <input type="text" class="form-control" name="operator" id="field_operator"
+                    ng-model="vm.log.operator"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.log.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_departmentId">Department Id</label>
+            <input type="number" class="form-control" name="departmentId" id="field_departmentId"
+                    ng-model="vm.log.departmentId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operatorId">Operator Id</label>
+            <input type="number" class="form-control" name="operatorId" id="field_operatorId"
+                    ng-model="vm.log.operatorId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ip">Ip</label>
+            <input type="text" class="form-control" name="ip" id="field_ip"
+                    ng-model="vm.log.ip"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_role">Role</label>
+            <input type="text" class="form-control" name="role" id="field_role"
+                    ng-model="vm.log.role"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operatingDate">Operating Date</label>
+            <input type="number" class="form-control" name="operatingDate" id="field_operatingDate"
+                    ng-model="vm.log.operatingDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.log.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,848 @@
+﻿1.公司信息表 (CompanyMessage)
+company_name                     公司名称
+company_logo                     公司LOGO
+company_principalid              公司负责人ID
+company_principal                公司负责人
+company_principal_phone          公司负责人电话
+site String,                     地址
+account_name                     开户名称
+opening_bank                     开户行
+phone                            电话
+Tax_number                       税号
+referrals                        推荐人
+referrals_phone                  推荐人手机号
+referralsAuthorizationid         推荐人授权ID
+authorizationid                  授权ID
+authorization_company_name       授权人公司名称
+status                           授权状态
+--------------------------------------------
+
+2.授权记录表 (AuthorizationRecord)
+id Long,
+contractNumbering String,        合同编号
+companyId Long,                  公司ID
+purchaseDate Long,               购买日期
+authorizationStartDate Long,     授权开始日期
+authorizationFinishDate Long,    授权结束日期
+authorizationType Integer,       授权类型
+remark String,                   备注
+authorizationId Long,            授权ID
+-----------------------------------------
+
+3.操作日志表  (LogRecord)
+operatingType String,            操作类型(增删改)
+operator String,                 操作人
+companyId Long,                  公司ID
+departmentId Long,               部门ID
+operatorId Long,                 操作人ID
+ip String,                       IP
+role String,                     角色
+operatingDate Long,              操作时间
+remark String,                   操作描述
+------------------------------------------
+
+4.部门表  (Department)
+companyId Long,                  公司ID
+department String,               部门名称
+departmentNumber Integer,        部门人数
+superiorDepartmentId Long,       上级部门ID
+DepartmentHeads String,          部门负责人
+DepartmentHeadsId Long,          部门负责人ID
+------------------------------------------
+
+5.岗位表  (Post)
+companyId Long,                  公司ID
+departmentId Long,               部门ID
+postName String,                 岗位名称
+staffing String,                 人员编制
+inEmployee Integer,              在职员工数
+fromEmployee Integer,            离职员工数
+------------------------------------------
+
+6.商品资料表 (CommodityData)
+companyId Long,                  公司ID
+mnemonicCode String,             助记码
+brand String,                    品牌
+salesName String,                销售名称
+colour String,                   颜色
+size Integer,                    尺寸、排量
+commodityType String,            商品类型
+normalPrice Double,              标准价
+remark String,                   备注
+status Integer,                  状态(启用、停用)
+
+---------------------------------------
+
+7.仓库表  (Warehouse)
+companyId Long,                  公司ID
+mnemonicCode String,             助记码
+name String,                     名称
+site String,                     地址
+principal String,                负责人
+phone String,                    电话
+remark String,                   备注
+status Integer,                  状态(启用、停用)
+
+
+--------------------------------------
+
+8.供应商档案表 (SupplierRecord)
+companyId Long,                   公司ID
+ mnemonicCode String,             助记码
+supplierStatus Integer,           供应商类别
+supplierName String,              供应商全称
+taxNumber String,                 税号
+phone String,                     电话号码
+openBank String,                  开户银行
+bankAccount String,               银行账号
+unitAddress String,               单位地址
+contact String,                   联系人
+contactPhone String,              联系电话
+paytype Integer,                  结算方式
+founder String,                   创建人
+founderTime Long,                 创建时间
+modifier String,                  修改人
+modifierTime Long,                修改时间
+remark String,                    备注
+
+--------------------------------------
+9.司机基本信息(DriverMessage)
+
+companyId Long,                    公司ID
+certificateType String,            证件类型
+certificatePhone String,           证件号码
+driverName String,                 姓名
+bormDate String,                   出生年月
+sex String,                        性别
+marriageStatus Integer,            婚姻状况
+phone String,                      手机号
+educationDegree String,            教育程度
+registered String,                 户口(本地、非本地)
+censusRegister String,             户口所在地
+housingType String,                住房类型
+contactAddress String,             联系地址
+houseLoan Double,                  房贷按揭金额
+deadline String,                   期限
+monthly String,                    月供
+residentialAddress String,         居住地址
+contactAddress String,             联系地址
+dwellTime Long,                    起始居住时间
+identityFront String,              身份证正面
+identityReverse String,            身份证反面
+drivingFront String,               驾驶证正页
+drivingReverse String,             驾驶证副页
+
+
+--------------------------------------
+
+10.司机配偶信息表  ((DriverMate))
+driverId Long,                   司机ID
+name String,                     姓名
+sex String,                      性别
+phone String,                    手机号
+certificateType String,          证件类型
+certificatePhone String,         证件号码
+location String,                 户口所在地
+unitName String,                 单位名称
+residentialAddress String,       居住地址
+unitAddress String,              单位地址
+
+----------------------------------------
+11.司机紧急人表 (DriverEmergencyContact)
+name1 String,                    姓名1
+residentialAddress1 String,      居住地址1
+phone1 String,                   手机号1
+relation1 String,                与申请人关系1
+name2 String,                    姓名2
+residentialAddress2 String,      居住地址2
+phone2 String,                   手机号2
+relation2 String,                与申请人关系2
+
+------------------------------------------
+
+12.购车记录 (BuyVehicleRecord)
+
+driverId Long,                  司机ID
+vehicleId Long,                 车辆ID
+companyId Long,                 公司ID
+receiptNumber String,           单据编号
+BuyVehicleDate Long             购车日期
+plateNumber String,             车牌号
+vehicleShelf String,            车架号
+engine String,                  发动机号
+downPayment BigDecimal,         首付款
+periods Integer,               月供期数
+amount  BigDecimal,            月供总金额
+notPeriods  Integer,           未缴期数
+notAmount BigDecimal,          未缴总金额
+postponeTime Integer,          延期次数
+overdueTiem  Integer,          逾期次数
+
+------------------------------------------
+
+13.租车记录表 (RentVehicleRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+phone String,                  手机号
+contractStartDate Long,        合同开始时间
+ContractEndDate Long,          合同结束时间
+monthlyRent BigDecimal,        月租金
+cashPledge  BigDecimal,        押金
+status Integer,                租车状态
+
+------------------------------------------
+
+14.还款记录表(RepaymentRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+repaymentTime Long,            还款时间
+money BigDecimal,              金额
+overdue  Integer,              是否逾期
+periods  Integer,              剩余期数
+nextMoney BigDecimal,          下期还款金额
+nextDate Long,                 下次还款日期
+remark String,                 备注
+operationTime Long,            操作时间
+
+-------------------------------------------
+
+15.延期记录表 (PostponeRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+operationTime Long,            操作时间
+plateNumber String,            车牌号
+driverName String,             司机姓名
+postponeData Integer           延期天数
+remark String,                 备注
+
+-------------------------------------------
+
+16.保养记录表(MaintainRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+repairFactory String,          修理厂
+money BigDecimal,              金额
+kilometre Long,                公里数
+maintainDate Long,             本次保养日期
+nextMaintain Long,             下次保养公里数
+remark String,                 备注
+
+--------------------------------------------
+
+17.出险记录表 (OutDangerRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+comeTime Long,                 出险时间
+responsibleParty Long,         责任方
+oneMoney  BigDecimal,          己方金额
+threeMoney BigDecimal,         三方金额
+repairFactory String,          修理厂
+remark String,                 备注
+
+---------------------------------------------
+
+18.维修记录表(MaintainRecord)
+
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+maintainNumber String,         维修单号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+maintainTime  Long,            维修时间
+money BigDecimal,              金额
+repairFactory String,          修理厂
+leaveFactoryTime  Long,        出厂时间
+maintainSky   Integer          维修天数
+remark String,                 备注
+
+---------------------------------------------
+
+19.保单记录表(PolicyRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+viBeginDate Long,              交强险开始日期
+viFinishDate Long,             交强险结束日期
+ciBeginDate Long,              商业险开始日期
+ciFinishDate Long,             商业险结束日期
+remark String,                 备注
+
+--------------------------------------------
+
+20.年检记录表(AiRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+aiDate Long,                   年检日期
+nextAiDate Long,               下次年检日期
+aiConductor String,            年检处理人
+money BigDecimal,              金额
+remark String,                 备注
+
+-------------------------------------------
+
+21.违章记录表 (IllegalRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+plateNumber String,            车牌号
+illegalDate  Long,             违章日期
+illegalSite  String,           违章地点
+detail String,                 详细内容
+illegalMoney  BigDecimal,      违章金额
+illegalDeduct Integer,         违章扣分
+status Integer,                状态
+
+---------------------------------------------
+
+22.退押金记录表 (RefundRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+refundTime Long,               退款时间
+money BigDecimal,              金额
+source  String,                渠道
+depositStatus Integer,         状态
+remark String,                 备注
+
+--------------------------------------------
+
+23.合同保证金记录表(ContractMarginRecord)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+receiptNumber String,          单据编号
+plateNumber String,            车牌号
+driverName String,             司机姓名
+paymentTime Long,              支付时间
+paymentWay  Integer,           支付方式
+paymentMoney BigDecimal,       支付金额
+paymentStatus Integer,         支付状态
+remark String,                 备注
+
+--------------------------------------------
+
+24.订单表 (OrderFrom)
+companyId Long,                公司ID
+marketId  Long,                销售ID
+driverId Long,                 司机ID
+productType String,            产品类型
+fuelType String,               燃油类型改装
+brandName String,              品牌
+type String,                   类型
+versions int,                  版本
+year String,                   年份
+refit Integer,                 改装方式
+salesPlan String,              销售方案
+salesPlanId String,            销售方案ID
+downPayment BigDecimal,        首付
+monthly  BigDecimal,           月还款金额
+periods  Integer,              期数
+cashPledge  BigDecimal,        押金
+rent   BigDecimal,             租金
+referralsIdNumber String,      推荐人证件号码
+phone  String,                 手机号
+name  String,                  姓名
+auditStatus Integer,           审核状态
+status Integer,                状态
+
+----------------------------------------------
+
+25.征信审核表 (CreditReview)
+orderId  Long,                 订单ID
+driverId Long,                 司机ID
+auditResult String,            审核结果
+audit String,                  审核人
+auditId Long,                  审核人ID
+auditTime Long,                审核时间
+remark String,                 备注
+
+-----------------------------------------------
+
+26.定金合同表(DepositContract)
+orderId  Long,                 订单ID
+gathering BigDecimal,          定金收款
+accountNumber String,          收款帐号
+receipt String,                收款收据
+contractNumbering String,      合同编号
+video String,                  合同视频
+auditStatus Integer,           审核状态
+auditRemark String,            备注
+
+----------------------------------------------
+27.补充资料表(AdditionalMaterials)
+orderId  Long,                 订单ID
+registered String,             户口本
+marriage String,               结婚证
+site String,                   住址证明/租房合同/房产证
+communicate String,            通话清单
+agreement String,              担保协议
+bankCard String,               银行卡
+
+-------------------------------------------------
+28.销售方案表(MarketingPlan)
+companyId Long,                公司ID
+planName String,               方案名称
+planType String ,              方案类型
+brand String,                  品牌
+type String,                   类型
+versions int,                  版本
+year String,                   年份
+downPayment BigDecimal,        首付
+periods  Integer,              期数
+monthly String,                月还款
+marketBeginTime  Long,         销售开始时间
+marketfinishTime  Long,        销售结束时间
+cashPledge  BigDecimal,        押金
+rent   BigDecimal,             租金
+
+-------------------------------------------------
+
+29.结清申请表 (SettleApply)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+plateNumber String,            车牌号
+driverName String,             司机姓名
+SettleType String,             结清类型
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+deductMarks  Integer,          违章扣分
+fine BigDecimal,               罚款
+pending BigDecimal,            未结案事项及金额
+remark String,                 备注
+status Integer,                状态(暂存、确认申请)
+
+------------------------------------------------
+
+30.正式合同表(FormalContract)
+orderId  Long,                 订单ID
+contractNumbering String,      合同编号
+video String,                  合同视频
+credit String,                 征信
+apply String,                  申请特批
+special String,                特批意见
+
+-------------------------------------------------
+
+31.逾期管理表 数据来源(OverdueManagement)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+plateNumber String,            车牌号
+driverName String,             司机姓名
+orderId  Long,                 订单ID
+repaymentTime Long,            还款时间
+money BigDecimal,              金额
+overdueData  Integer,          逾期天数
+overdueInterest BigDecimal,    逾期利息+滞纳金
+nextMoneyData  Long,           下期还款日.
+postponeData Integer           延期天数
+informVehicle String,          通知收车
+recycleVehicle Long,           收车日期
+remark String,                 备注
+
+--------------------------------------------------
+
+32.强制结清表(ForcedSettle)
+driverId Long,                 司机ID
+vehicleId Long,                车辆ID
+companyId Long,                公司ID
+plateNumber String,            车牌号
+driverName String,             司机姓名
+periods Integer,               月供期数
+sumMoney BigDecimal,           总金额
+notPeriods  Integer,           未缴期数
+notMoney BigDecimal,           未缴纳金额
+settleType String,             结清类型
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+whetherRecycle Integer,        是否需要收车
+remark String,                 备注
+status Integer,                状态(暂存、强制结清)
+
+-------------------------------------------------
+
+33.首付款收款表(DownPayment)
+companyId Long,                公司ID
+orderId  Long,                 订单ID
+receiptMoney BigDecimal,       收款金额
+receiptWater String,           收款流水
+accountNumber String,          收款帐号
+receipt String,                收款收据
+
+------------------------------------------------
+
+34.请款审核表
+companyId Long,                公司ID
+orderId  Long,                 订单ID
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+pleasePayeeId Long,            请款人ID
+pleasePayeeName String,        请款人姓名
+pleasePayeeMoney BigDecimal,   请款金额
+reason String,                 用款事由
+gatheringName String,          收款人
+gatheringNumber String,        收款帐号
+useTime Long,                  用款时间
+remark1 String,                备注
+accessory String,              上传附近
+status Integer,                状态
+useTime Long,                  用款时间
+remark2  String,               备注
+remit String,                  打款事间
+serialNumber String,           流水号
+establishTime Long,            创建时间
+amendTime Long,                修改时间
+amendPerson String,            修改人
+submitter String,              提交人
+submitTime Long,               提交时间
+auditor String,                审批人
+auditorTime Long,              审批时间
+condition Integer,             实际转账情况
+pleasePayeeType String,        请款类型
+vehicleShelf String,           车架号
+engine String,                 发动机号
+driverId Long,                 司机ID
+driverName String,             司机姓名
+
+--------------------------------------------
+
+35.月供管理表(MonthlyManagement)
+driverId Long,                 司机ID
+orderId  Long,                 订单ID
+companyId Long,                公司ID
+driverName String,             司机姓名
+bankAccount String,            帐号
+repaymentTime Long,            还款时间
+money BigDecimal,              金额
+overdue  Integer,              是否逾期
+periods  Integer,              剩余期数
+nextMoney BigDecimal,          下期还款金
+nextDate Long,                 下次还款日期
+periodsStatus Integer,         月供状态
+remark String,                 备注
+
+--------------------------------------------
+
+36.逾期款项收取表(OverdueGathering)
+driverId Long,                 司机ID
+orderId  Long,                 订单ID
+companyId Long,                公司ID
+vehicleId Long,                车辆ID
+repaymentTime Long,            应还款时间
+overdueAwait BigDecimal,       逾期待还
+overdueInterest BigDecimal,    逾期利息+滞纳金
+overdueData  Integer,          逾期天数
+total BigDecimal,              合计
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+practicalMoney BigDecimal,     实收金额
+paymentWay  Integer,           付款方式
+remark1 String,                备注
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+gathering  Integer,            是否收款
+gatherTime Long,               收取时间
+remark2 String,                备注
+
+---------------------------------------------
+
+37.租金管理(RentalManagement)
+driverId Long,                 司机ID
+orderId  Long,                 订单ID
+companyId Long,                公司ID
+vehicleId Long,                车辆ID
+plateNumber String,            车牌号
+driverName String,             司机姓名
+rentTime Long,                 租金时间
+money BigDecimal,              金额
+overdue  Integer,              是否逾期
+remark String,                 备注
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+plateNumber String,            车牌号
+nextRentTime Long,             下次收租时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+whetherGather  Integer,        是否已收取
+
+----------------------------------------------
+
+38.退押金记录(RetreatDeposit)
+driverId Long,                 司机ID
+orderId  Long,                 订单ID
+companyId Long,                公司ID
+vehicleId Long,                车辆ID
+plateNumber String,            车牌号
+driverName String,             司机姓名
+refundTime Long,               退款时间
+money BigDecimal,              金额
+source  String,                渠道
+pledgeStatus Integer,          押金状态
+remark String,                 备注
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+plateNumber String,            车牌号
+nextRentTime Long,             下次收租时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+whetherRefund  Integer,        是否已收取
+
+---------------------------------------------
+
+39.理赔审核表(ClaimSettlementAudit)
+driverId Long,                 司机ID
+orderId  Long,                 订单ID
+companyId Long,                公司ID
+vehicleId Long,                车辆ID
+claimMoney BigDecimal,         理赔金额
+illegalNaam Integer,           违章需扣取
+illegalNumber String,          违章单据号
+illegalAccessory String,       违章附件
+payment BigDecimal,            自有修理厂垫付需扣取
+repairAccessory String,        修理厂附件
+debt BigDecimal,               欠款扣取
+debtAccessory String,          欠款扣取附件
+debtRemark String,             欠款扣取备注
+actualPayment BigDecimal,      实际付款
+paymentTime Long,              付款时间
+accountNumber String,          收款帐号
+paymentWay  Integer,           支付方式
+serialNumber String,           流水单号
+auditStatus Integer,           审核确认
+
+-------------------------------------------
+
+40.用户表 (User)
+companyId Long,                公司ID
+departmentId Long,             部门ID
+department String,             部门名称
+postId Long ,                  岗位ID
+postName String,               岗位名称
+phone String,                  手机号
+jobNumber String,              工号
+password String,               密码
+workEmail String,              工作邮箱
+status Integer,                状态
+remark String,                 备注
+depositBank1 String,           开户银行1  默认
+cardNumber1 String,            银行卡号1
+depositBank2 String,           开户银行2
+cardNumber2 String,            银行卡号2
+
+id Long,
+companyId Long,
+departmentId Long,
+department String,
+postId Long ,
+postName String,
+phone String,
+jobNumber String,
+password String,
+workEmail String,
+status Integer,
+remark String,
+depositBank1 String,
+cardNumber1 String,
+depositBank2 String,
+cardNumber2 String,
+
+--------------------------------------------
+
+41.验车记录表(ValidateRecord)
+driverId Long,                 司机ID
+companyId Long,                公司ID
+vehicleId Long,                车辆ID
+receiptNumber String,          单据编号
+receiptDate Long,              单据日期
+operatingDate Long,            操作时间
+plateNumber String,            车牌号
+validateTime Long,             验车时间
+kilometre Integer,             公里数
+damage  Integer,               是否车损
+describes String,              描述
+damagepIcture String,          车损照片
+remark String,                 备注
+
+----------------------------------------
+
+42.GPS改装表 (GPSRefit)
+vehicleId Long,                车辆ID
+gpsdevice String,              GPS设备号
+remark String,                 备注
+gpsInstall String,             GPS安装记录
+installTime Long,              安装时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+---------------------------------------
+
+43.油改气表(GasRefit)
+vehicleId Long,                车辆ID
+refit Integer,                 改装方式
+remark String,                 备注
+refitRecord String,            改装记录
+refitTime Long,                改装时间
+refitUnit String,              改装单位
+phone String,                  联系电话
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+----------------------------------------
+
+44.购置税缴纳(PurchaseTax)
+vehicleId Long,                车辆ID
+PurchaseTaxmoney BigDecimal,   购置税金额
+remark String,                 备注
+invoicePicture String,         购置税发票图片
+purchaseTime Long,             购买时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+------------------------------------------
+
+45.保险购买(InsurancePurchase)
+vehicleId Long,                车辆ID
+insuranceCompany String,       交强险保险公司
+insuranceMoney BigDecimal,     交强险金额
+policyNumber String,           交强险保单号
+ibeginDate Long,               交钱险开始日期
+ifinishDate Long,              交强险结束日期
+icompanyName String,           交强险被保险公司名称
+commercialCompany String,      商业险保险公司
+commercialMoney BigDecimal,    商业险保险金额
+commercialNumber String,       商业险保单号
+cbeginDate Long,               商业险开始日期
+cfinishDate Long,              商业险结束日期
+ccompanyName String,           商业险被保险公司名称
+remark String,                 备注
+iphotograph String,            交强险照片
+cphotograph String,            商业险照片
+purchaseTime Long,             购买时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+---------------------------------------------
+
+46.上牌(OnBrand)
+vehicleId Long,                车辆ID
+gpsdevice String,              GPS设备号
+remark String,                 备注
+gpsInstall String,             GPS安装记录
+installTime Long,              安装时间
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+----------------------------------------------
+
+47.收车管理表 (ReceiveVehicle)
+vehicleId Long,                车辆ID
+informVehicleTime Long,        通知收车时间
+informData String,             通知天数
+informVehicleDate Long,        收车日期
+remark String,                 备注
+parkWarehouse String,          停放仓库
+founder String,                创建人
+founderTime Long,              创建时间
+modifier String,               修改人
+modifierTime Long,             修改时间
+
+-------------------------------------------------
+
+48.资料收取表 (DataCollection)
+driverId Long,                  司机ID
+orderId  Long,                  订单ID
+data String,                    32项资料
+
+-------------------------------------------------
+
+49.车辆表 (Vehicle)
+companyId Long,                 公司ID
+engine String,                  发动机号
+vehicleShelf String,            车架号
+plateNumber String,             车牌号
+driverId Long,                  司机ID
+driverName String,              司机姓名
+vehicleColour String,           车身颜色
+status Integer,                 状态
+stopLocation String,            停放位置
+brandType String,               品牌车型
+company String,                 所属公司
+vehicleType String,             车辆类型
+remark String,                  备注
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yo jhipster:import-jdl

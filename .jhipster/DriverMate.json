@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "certificateType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "certificatePhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "location",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "residentialAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitAddress",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027022522",
+    "entityTableName": "driver_mate",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

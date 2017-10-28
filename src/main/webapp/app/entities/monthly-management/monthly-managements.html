@@ -1,0 +1,84 @@
+<div>
+    <h2>Monthly Managements</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="monthly-management.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Monthly Management
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bankAccount"><span>Bank Account</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="repaymentTime"><span>Repayment Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="money"><span>Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="overdue"><span>Overdue</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="periods"><span>Periods</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nextMoney"><span>Next Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nextDate"><span>Next Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="periodsStatus"><span>Periods Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="monthlyManagement in vm.monthlyManagements track by monthlyManagement.id">
+                    <td><a ui-sref="monthly-management-detail({id:monthlyManagement.id})">{{monthlyManagement.id}}</a></td>
+                    <td>{{monthlyManagement.driverId}}</td>
+                    <td>{{monthlyManagement.orderId}}</td>
+                    <td>{{monthlyManagement.companyId}}</td>
+                    <td>{{monthlyManagement.driverName}}</td>
+                    <td>{{monthlyManagement.bankAccount}}</td>
+                    <td>{{monthlyManagement.repaymentTime}}</td>
+                    <td>{{monthlyManagement.money}}</td>
+                    <td>{{monthlyManagement.overdue}}</td>
+                    <td>{{monthlyManagement.periods}}</td>
+                    <td>{{monthlyManagement.nextMoney}}</td>
+                    <td>{{monthlyManagement.nextDate}}</td>
+                    <td>{{monthlyManagement.periodsStatus}}</td>
+                    <td>{{monthlyManagement.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="monthly-management-detail({id:monthlyManagement.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="monthly-management.edit({id:monthlyManagement.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="monthly-management.delete({id:monthlyManagement.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

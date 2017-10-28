@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span>Vehicle</span> {{vm.vehicle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.vehicle.companyId}}</span>
+        </dd>
+        <dt><span>Engine</span></dt>
+        <dd>
+            <span>{{vm.vehicle.engine}}</span>
+        </dd>
+        <dt><span>Vehicle Shelf</span></dt>
+        <dd>
+            <span>{{vm.vehicle.vehicleShelf}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.vehicle.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.vehicle.driverId}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.vehicle.driverName}}</span>
+        </dd>
+        <dt><span>Vehicle Colour</span></dt>
+        <dd>
+            <span>{{vm.vehicle.vehicleColour}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.vehicle.status}}</span>
+        </dd>
+        <dt><span>Stop Location</span></dt>
+        <dd>
+            <span>{{vm.vehicle.stopLocation}}</span>
+        </dd>
+        <dt><span>Brand Type</span></dt>
+        <dd>
+            <span>{{vm.vehicle.brandType}}</span>
+        </dd>
+        <dt><span>Company</span></dt>
+        <dd>
+            <span>{{vm.vehicle.company}}</span>
+        </dd>
+        <dt><span>Vehicle Type</span></dt>
+        <dd>
+            <span>{{vm.vehicle.vehicleType}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.vehicle.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vehicle-detail.edit({id:vm.vehicle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

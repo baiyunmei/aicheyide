@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "contractNumbering",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "purchaseDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "authorizationStartDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "authorizationFinishDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "authorizationType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "authorizationId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171026094959",
+    "entityTableName": "authorization_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

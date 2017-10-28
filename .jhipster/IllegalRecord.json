@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "illegalDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "illegalSite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "illegalMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "illegalDeduct",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171027073252",
+    "entityTableName": "illegal_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

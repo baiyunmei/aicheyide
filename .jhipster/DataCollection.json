@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "data",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028112338",
+    "entityTableName": "data_collection",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

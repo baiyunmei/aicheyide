@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "departmentNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "superiorDepartmentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "departmentHeads",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "departmentHeadsId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171026113146",
+    "entityTableName": "department",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

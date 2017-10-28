@@ -1,0 +1,95 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "insuranceCompany",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "insuranceMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "policyNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ibeginDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ifinishDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "icompanyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commercialCompany",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commercialMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "commercialNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cbeginDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "cfinishDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ccompanyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iphotograph",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cphotograph",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "purchaseTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "founder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founderTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifierTime",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171028110931",
+    "entityTableName": "insurance_purchase",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

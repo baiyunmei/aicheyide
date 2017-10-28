@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Refund Record</span> {{vm.refundRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.driverName}}</span>
+        </dd>
+        <dt><span>Refund Time</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.refundTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.money}}</span>
+        </dd>
+        <dt><span>Source</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.source}}</span>
+        </dd>
+        <dt><span>Deposit Status</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.depositStatus}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.refundRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="refund-record-detail.edit({id:vm.refundRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

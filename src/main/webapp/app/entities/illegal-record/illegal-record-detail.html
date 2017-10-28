@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Illegal Record</span> {{vm.illegalRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.companyId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Illegal Date</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.illegalDate}}</span>
+        </dd>
+        <dt><span>Illegal Site</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.illegalSite}}</span>
+        </dd>
+        <dt><span>Detail</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.detail}}</span>
+        </dd>
+        <dt><span>Illegal Money</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.illegalMoney}}</span>
+        </dd>
+        <dt><span>Illegal Deduct</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.illegalDeduct}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.illegalRecord.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="illegal-record-detail.edit({id:vm.illegalRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

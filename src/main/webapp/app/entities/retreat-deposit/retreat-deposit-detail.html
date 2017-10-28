@@ -1,0 +1,95 @@
+
+<div>
+    <h2><span>Retreat Deposit</span> {{vm.retreatDeposit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.driverId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.orderId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.vehicleId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.driverName}}</span>
+        </dd>
+        <dt><span>Refund Time</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.refundTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.money}}</span>
+        </dd>
+        <dt><span>Source</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.source}}</span>
+        </dd>
+        <dt><span>Pledge Status</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.pledgeStatus}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.remark}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.receiptDate}}</span>
+        </dd>
+        <dt><span>Next Rent Time</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.nextRentTime}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.modifierTime}}</span>
+        </dd>
+        <dt><span>Whether Refund</span></dt>
+        <dd>
+            <span>{{vm.retreatDeposit.whetherRefund}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="retreat-deposit-detail.edit({id:vm.retreatDeposit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMonthlyManagementLabel">Create or edit a Monthly Management</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.monthlyManagement.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.monthlyManagement.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.monthlyManagement.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.monthlyManagement.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.monthlyManagement.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.monthlyManagement.driverName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bankAccount">Bank Account</label>
+            <input type="text" class="form-control" name="bankAccount" id="field_bankAccount"
+                    ng-model="vm.monthlyManagement.bankAccount"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_repaymentTime">Repayment Time</label>
+            <input type="number" class="form-control" name="repaymentTime" id="field_repaymentTime"
+                    ng-model="vm.monthlyManagement.repaymentTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_money">Money</label>
+            <input type="number" class="form-control" name="money" id="field_money"
+                    ng-model="vm.monthlyManagement.money"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdue">Overdue</label>
+            <input type="number" class="form-control" name="overdue" id="field_overdue"
+                    ng-model="vm.monthlyManagement.overdue"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_periods">Periods</label>
+            <input type="number" class="form-control" name="periods" id="field_periods"
+                    ng-model="vm.monthlyManagement.periods"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nextMoney">Next Money</label>
+            <input type="number" class="form-control" name="nextMoney" id="field_nextMoney"
+                    ng-model="vm.monthlyManagement.nextMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nextDate">Next Date</label>
+            <input type="number" class="form-control" name="nextDate" id="field_nextDate"
+                    ng-model="vm.monthlyManagement.nextDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_periodsStatus">Periods Status</label>
+            <input type="number" class="form-control" name="periodsStatus" id="field_periodsStatus"
+                    ng-model="vm.monthlyManagement.periodsStatus"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.monthlyManagement.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

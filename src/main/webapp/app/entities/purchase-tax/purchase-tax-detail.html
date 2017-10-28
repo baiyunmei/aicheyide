@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Purchase Tax</span> {{vm.purchaseTax.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.vehicleId}}</span>
+        </dd>
+        <dt><span>Purchase Taxmoney</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.purchaseTaxmoney}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.remark}}</span>
+        </dd>
+        <dt><span>Invoice Picture</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.invoicePicture}}</span>
+        </dd>
+        <dt><span>Purchase Time</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.purchaseTime}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.purchaseTax.modifierTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="purchase-tax-detail.edit({id:vm.purchaseTax.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "gpsdevice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gpsInstall",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "installTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "founder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founderTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifierTime",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171028111229",
+    "entityTableName": "on_brand",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

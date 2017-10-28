@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Commodity Data</span> {{vm.commodityData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.commodityData.companyId}}</span>
+        </dd>
+        <dt><span>Mnemonic Code</span></dt>
+        <dd>
+            <span>{{vm.commodityData.mnemonicCode}}</span>
+        </dd>
+        <dt><span>Brand</span></dt>
+        <dd>
+            <span>{{vm.commodityData.brand}}</span>
+        </dd>
+        <dt><span>Sales Name</span></dt>
+        <dd>
+            <span>{{vm.commodityData.salesName}}</span>
+        </dd>
+        <dt><span>Colour</span></dt>
+        <dd>
+            <span>{{vm.commodityData.colour}}</span>
+        </dd>
+        <dt><span>Size</span></dt>
+        <dd>
+            <span>{{vm.commodityData.size}}</span>
+        </dd>
+        <dt><span>Commodity Type</span></dt>
+        <dd>
+            <span>{{vm.commodityData.commodityType}}</span>
+        </dd>
+        <dt><span>Normal Price</span></dt>
+        <dd>
+            <span>{{vm.commodityData.normalPrice}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.commodityData.remark}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.commodityData.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="commodity-data-detail.edit({id:vm.commodityData.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

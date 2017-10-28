@@ -1,0 +1,83 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "money",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "overdue",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nextRentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "founder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founderTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifierTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "whetherGather",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171028094946",
+    "entityTableName": "rental_management",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

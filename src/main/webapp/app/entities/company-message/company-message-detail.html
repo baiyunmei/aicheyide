@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span>Company Message</span> {{vm.companyMessage.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Name</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.companyName}}</span>
+        </dd>
+        <dt><span>Company Logo</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.companyLogo}}</span>
+        </dd>
+        <dt><span>Company Principal Id</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.companyPrincipalId}}</span>
+        </dd>
+        <dt><span>Company Principal</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.companyPrincipal}}</span>
+        </dd>
+        <dt><span>Company Principalphone</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.companyPrincipalphone}}</span>
+        </dd>
+        <dt><span>Site</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.site}}</span>
+        </dd>
+        <dt><span>Account Name</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.accountName}}</span>
+        </dd>
+        <dt><span>Opening Bank</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.openingBank}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.phone}}</span>
+        </dd>
+        <dt><span>Tax Number</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.taxNumber}}</span>
+        </dd>
+        <dt><span>Referrals</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.referrals}}</span>
+        </dd>
+        <dt><span>Referrals Phone</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.referralsPhone}}</span>
+        </dd>
+        <dt><span>Referrals Authorization Id</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.referralsAuthorizationId}}</span>
+        </dd>
+        <dt><span>Authorization Id</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.authorizationId}}</span>
+        </dd>
+        <dt><span>Authorization Company Name</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.authorizationCompanyName}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.companyMessage.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="company-message-detail.edit({id:vm.companyMessage.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

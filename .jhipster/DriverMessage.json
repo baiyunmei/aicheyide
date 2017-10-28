@@ -1,0 +1,99 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "certificateType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "certificatePhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bormDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "marriageStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "educationDegree",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "registered",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "censusRegister",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "housingType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "houseLoan",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "deadline",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "monthly",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "residentialAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dwellTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "identityFront",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "identityReverse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "drivingFront",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "drivingReverse",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027031043",
+    "entityTableName": "driver_message",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

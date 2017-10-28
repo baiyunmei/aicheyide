@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Down Payment</span> {{vm.downPayment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.downPayment.companyId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.downPayment.orderId}}</span>
+        </dd>
+        <dt><span>Receipt Money</span></dt>
+        <dd>
+            <span>{{vm.downPayment.receiptMoney}}</span>
+        </dd>
+        <dt><span>Receipt Water</span></dt>
+        <dd>
+            <span>{{vm.downPayment.receiptWater}}</span>
+        </dd>
+        <dt><span>Account Number</span></dt>
+        <dd>
+            <span>{{vm.downPayment.accountNumber}}</span>
+        </dd>
+        <dt><span>Receipt</span></dt>
+        <dd>
+            <span>{{vm.downPayment.receipt}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="down-payment-detail.edit({id:vm.downPayment.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

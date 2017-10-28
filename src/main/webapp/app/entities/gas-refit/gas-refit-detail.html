@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Gas Refit</span> {{vm.gasRefit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.vehicleId}}</span>
+        </dd>
+        <dt><span>Refit</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.refit}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.remark}}</span>
+        </dd>
+        <dt><span>Refit Record</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.refitRecord}}</span>
+        </dd>
+        <dt><span>Refit Time</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.refitTime}}</span>
+        </dd>
+        <dt><span>Refit Unit</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.refitUnit}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.phone}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.gasRefit.modifierTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="gas-refit-detail.edit({id:vm.gasRefit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

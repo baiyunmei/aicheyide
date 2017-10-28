@@ -1,0 +1,78 @@
+<div>
+    <h2>Receive Vehicles</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="receive-vehicle.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Receive Vehicle
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="informVehicleTime"><span>Inform Vehicle Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="informData"><span>Inform Data</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="informVehicleDate"><span>Inform Vehicle Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="parkWarehouse"><span>Park Warehouse</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founder"><span>Founder</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founderTime"><span>Founder Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifier"><span>Modifier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifierTime"><span>Modifier Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="receiveVehicle in vm.receiveVehicles track by receiveVehicle.id">
+                    <td><a ui-sref="receive-vehicle-detail({id:receiveVehicle.id})">{{receiveVehicle.id}}</a></td>
+                    <td>{{receiveVehicle.vehicleId}}</td>
+                    <td>{{receiveVehicle.informVehicleTime}}</td>
+                    <td>{{receiveVehicle.informData}}</td>
+                    <td>{{receiveVehicle.informVehicleDate}}</td>
+                    <td>{{receiveVehicle.remark}}</td>
+                    <td>{{receiveVehicle.parkWarehouse}}</td>
+                    <td>{{receiveVehicle.founder}}</td>
+                    <td>{{receiveVehicle.founderTime}}</td>
+                    <td>{{receiveVehicle.modifier}}</td>
+                    <td>{{receiveVehicle.modifierTime}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="receive-vehicle-detail({id:receiveVehicle.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="receive-vehicle.edit({id:receiveVehicle.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="receive-vehicle.delete({id:receiveVehicle.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maintainNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maintainTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "money",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "repairFactory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "leaveFactoryTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maintainSky",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027063300",
+    "entityTableName": "maintain_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

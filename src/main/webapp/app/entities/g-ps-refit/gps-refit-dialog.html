@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGPSRefitLabel">Create or edit a GPS Refit</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.gPSRefit.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.gPSRefit.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.gPSRefit.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.gPSRefit.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.gPSRefit.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.gPSRefit.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptDate">Receipt Date</label>
+            <input type="number" class="form-control" name="receiptDate" id="field_receiptDate"
+                    ng-model="vm.gPSRefit.receiptDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_operatingDate">Operating Date</label>
+            <input type="number" class="form-control" name="operatingDate" id="field_operatingDate"
+                    ng-model="vm.gPSRefit.operatingDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.gPSRefit.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_validateTime">Validate Time</label>
+            <input type="number" class="form-control" name="validateTime" id="field_validateTime"
+                    ng-model="vm.gPSRefit.validateTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_kilometre">Kilometre</label>
+            <input type="number" class="form-control" name="kilometre" id="field_kilometre"
+                    ng-model="vm.gPSRefit.kilometre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_damage">Damage</label>
+            <input type="number" class="form-control" name="damage" id="field_damage"
+                    ng-model="vm.gPSRefit.damage"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_describes">Describes</label>
+            <input type="text" class="form-control" name="describes" id="field_describes"
+                    ng-model="vm.gPSRefit.describes"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_damagepIcture">Damagep Icture</label>
+            <input type="text" class="form-control" name="damagepIcture" id="field_damagepIcture"
+                    ng-model="vm.gPSRefit.damagepIcture"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.gPSRefit.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

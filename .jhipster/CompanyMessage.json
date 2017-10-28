@@ -1,0 +1,75 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyLogo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyPrincipalId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyPrincipal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyPrincipalphone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "site",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "openingBank",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taxNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "referrals",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "referralsPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "referralsAuthorizationId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "authorizationId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "authorizationCompanyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171026092106",
+    "entityTableName": "company_message",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

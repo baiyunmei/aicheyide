@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Log Record</span> {{vm.logRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Operating Type</span></dt>
+        <dd>
+            <span>{{vm.logRecord.operatingType}}</span>
+        </dd>
+        <dt><span>Operator</span></dt>
+        <dd>
+            <span>{{vm.logRecord.operator}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.logRecord.companyId}}</span>
+        </dd>
+        <dt><span>Department Id</span></dt>
+        <dd>
+            <span>{{vm.logRecord.departmentId}}</span>
+        </dd>
+        <dt><span>Operator Id</span></dt>
+        <dd>
+            <span>{{vm.logRecord.operatorId}}</span>
+        </dd>
+        <dt><span>Ip</span></dt>
+        <dd>
+            <span>{{vm.logRecord.ip}}</span>
+        </dd>
+        <dt><span>Role</span></dt>
+        <dd>
+            <span>{{vm.logRecord.role}}</span>
+        </dd>
+        <dt><span>Operating Date</span></dt>
+        <dd>
+            <span>{{vm.logRecord.operatingDate}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.logRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="log-record-detail.edit({id:vm.logRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

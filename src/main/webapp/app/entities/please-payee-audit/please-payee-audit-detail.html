@@ -1,0 +1,139 @@
+
+<div>
+    <h2><span>Please Payee Audit</span> {{vm.pleasePayeeAudit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.companyId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.orderId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.receiptDate}}</span>
+        </dd>
+        <dt><span>Please Payee Id</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.pleasePayeeId}}</span>
+        </dd>
+        <dt><span>Please Payee Name</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.pleasePayeeName}}</span>
+        </dd>
+        <dt><span>Please Payee Money</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.pleasePayeeMoney}}</span>
+        </dd>
+        <dt><span>Reason</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.reason}}</span>
+        </dd>
+        <dt><span>Gathering Name</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.gatheringName}}</span>
+        </dd>
+        <dt><span>Gathering Number</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.gatheringNumber}}</span>
+        </dd>
+        <dt><span>Use Time</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.useTime}}</span>
+        </dd>
+        <dt><span>Remark 1</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.remark1}}</span>
+        </dd>
+        <dt><span>Accessory</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.accessory}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.status}}</span>
+        </dd>
+        <dt><span>Remark 2</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.remark2}}</span>
+        </dd>
+        <dt><span>Remit</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.remit}}</span>
+        </dd>
+        <dt><span>Serial Number</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.serialNumber}}</span>
+        </dd>
+        <dt><span>Establish Time</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.establishTime}}</span>
+        </dd>
+        <dt><span>Amend Time</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.amendTime}}</span>
+        </dd>
+        <dt><span>Amend Person</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.amendPerson}}</span>
+        </dd>
+        <dt><span>Submitter</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.submitter}}</span>
+        </dd>
+        <dt><span>Submit Time</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.submitTime}}</span>
+        </dd>
+        <dt><span>Auditor</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.auditor}}</span>
+        </dd>
+        <dt><span>Auditor Time</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.auditorTime}}</span>
+        </dd>
+        <dt><span>Conditions</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.conditions}}</span>
+        </dd>
+        <dt><span>Please Payee Type</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.pleasePayeeType}}</span>
+        </dd>
+        <dt><span>Vehicle Shelf</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.vehicleShelf}}</span>
+        </dd>
+        <dt><span>Engine</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.engine}}</span>
+        </dd>
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.driverId}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.pleasePayeeAudit.driverName}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="please-payee-audit-detail.edit({id:vm.pleasePayeeAudit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

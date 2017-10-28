@@ -1,0 +1,71 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "repaymentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "money",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "overdueData",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "overdueInterest",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "nextMoneyData",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "postponeData",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "informVehicle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recycleVehicle",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171028034539",
+    "entityTableName": "overdue_management",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

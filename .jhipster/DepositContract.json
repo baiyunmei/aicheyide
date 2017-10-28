@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "auditResult",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "audit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "auditTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027085725",
+    "entityTableName": "deposit_contract",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "paymentWay",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "paymentMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "paymentStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027074750",
+    "entityTableName": "contract_margin_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

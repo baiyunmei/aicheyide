@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span>Overdue Management</span> {{vm.overdueManagement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.companyId}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.driverName}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.orderId}}</span>
+        </dd>
+        <dt><span>Repayment Time</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.repaymentTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.money}}</span>
+        </dd>
+        <dt><span>Overdue Data</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.overdueData}}</span>
+        </dd>
+        <dt><span>Overdue Interest</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.overdueInterest}}</span>
+        </dd>
+        <dt><span>Next Money Data</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.nextMoneyData}}</span>
+        </dd>
+        <dt><span>Postpone Data</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.postponeData}}</span>
+        </dd>
+        <dt><span>Inform Vehicle</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.informVehicle}}</span>
+        </dd>
+        <dt><span>Recycle Vehicle</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.recycleVehicle}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.overdueManagement.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="overdue-management-detail.edit({id:vm.overdueManagement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

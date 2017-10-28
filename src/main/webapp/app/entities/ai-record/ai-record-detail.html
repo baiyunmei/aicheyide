@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Ai Record</span> {{vm.aiRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Ai Date</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.aiDate}}</span>
+        </dd>
+        <dt><span>Next Ai Date</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.nextAiDate}}</span>
+        </dd>
+        <dt><span>Ai Conductor</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.aiConductor}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.money}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.aiRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="ai-record-detail.edit({id:vm.aiRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

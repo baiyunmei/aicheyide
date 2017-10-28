@@ -1,0 +1,102 @@
+<div>
+    <h2>Order Froms</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="order-from.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Order From
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="marketId"><span>Market Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="productType"><span>Product Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fuelType"><span>Fuel Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="brandName"><span>Brand Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="type"><span>Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="versions"><span>Versions</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="year"><span>Year</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refit"><span>Refit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="salesPlan"><span>Sales Plan</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="salesPlanId"><span>Sales Plan Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="downPayment"><span>Down Payment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="monthly"><span>Monthly</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="periods"><span>Periods</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cashPledge"><span>Cash Pledge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rent"><span>Rent</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="referralsIdNumber"><span>Referrals Id Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span>Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span>Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditStatus"><span>Audit Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="orderFrom in vm.orderFroms track by orderFrom.id">
+                    <td><a ui-sref="order-from-detail({id:orderFrom.id})">{{orderFrom.id}}</a></td>
+                    <td>{{orderFrom.companyId}}</td>
+                    <td>{{orderFrom.marketId}}</td>
+                    <td>{{orderFrom.driverId}}</td>
+                    <td>{{orderFrom.productType}}</td>
+                    <td>{{orderFrom.fuelType}}</td>
+                    <td>{{orderFrom.brandName}}</td>
+                    <td>{{orderFrom.type}}</td>
+                    <td>{{orderFrom.versions}}</td>
+                    <td>{{orderFrom.year}}</td>
+                    <td>{{orderFrom.refit}}</td>
+                    <td>{{orderFrom.salesPlan}}</td>
+                    <td>{{orderFrom.salesPlanId}}</td>
+                    <td>{{orderFrom.downPayment}}</td>
+                    <td>{{orderFrom.monthly}}</td>
+                    <td>{{orderFrom.periods}}</td>
+                    <td>{{orderFrom.cashPledge}}</td>
+                    <td>{{orderFrom.rent}}</td>
+                    <td>{{orderFrom.referralsIdNumber}}</td>
+                    <td>{{orderFrom.phone}}</td>
+                    <td>{{orderFrom.name}}</td>
+                    <td>{{orderFrom.auditStatus}}</td>
+                    <td>{{orderFrom.status}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="order-from-detail({id:orderFrom.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="order-from.edit({id:orderFrom.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="order-from.delete({id:orderFrom.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInsurancePurchaseLabel">Create or edit a Insurance Purchase</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.insurancePurchase.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.insurancePurchase.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.insurancePurchase.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_insuranceCompany">Insurance Company</label>
+            <input type="text" class="form-control" name="insuranceCompany" id="field_insuranceCompany"
+                    ng-model="vm.insurancePurchase.insuranceCompany"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_insuranceMoney">Insurance Money</label>
+            <input type="number" class="form-control" name="insuranceMoney" id="field_insuranceMoney"
+                    ng-model="vm.insurancePurchase.insuranceMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_policyNumber">Policy Number</label>
+            <input type="text" class="form-control" name="policyNumber" id="field_policyNumber"
+                    ng-model="vm.insurancePurchase.policyNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ibeginDate">Ibegin Date</label>
+            <input type="number" class="form-control" name="ibeginDate" id="field_ibeginDate"
+                    ng-model="vm.insurancePurchase.ibeginDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ifinishDate">Ifinish Date</label>
+            <input type="number" class="form-control" name="ifinishDate" id="field_ifinishDate"
+                    ng-model="vm.insurancePurchase.ifinishDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_icompanyName">Icompany Name</label>
+            <input type="text" class="form-control" name="icompanyName" id="field_icompanyName"
+                    ng-model="vm.insurancePurchase.icompanyName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commercialCompany">Commercial Company</label>
+            <input type="text" class="form-control" name="commercialCompany" id="field_commercialCompany"
+                    ng-model="vm.insurancePurchase.commercialCompany"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commercialMoney">Commercial Money</label>
+            <input type="number" class="form-control" name="commercialMoney" id="field_commercialMoney"
+                    ng-model="vm.insurancePurchase.commercialMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commercialNumber">Commercial Number</label>
+            <input type="text" class="form-control" name="commercialNumber" id="field_commercialNumber"
+                    ng-model="vm.insurancePurchase.commercialNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cbeginDate">Cbegin Date</label>
+            <input type="number" class="form-control" name="cbeginDate" id="field_cbeginDate"
+                    ng-model="vm.insurancePurchase.cbeginDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cfinishDate">Cfinish Date</label>
+            <input type="number" class="form-control" name="cfinishDate" id="field_cfinishDate"
+                    ng-model="vm.insurancePurchase.cfinishDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ccompanyName">Ccompany Name</label>
+            <input type="text" class="form-control" name="ccompanyName" id="field_ccompanyName"
+                    ng-model="vm.insurancePurchase.ccompanyName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.insurancePurchase.remark"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_iphotograph">Iphotograph</label>
+            <input type="text" class="form-control" name="iphotograph" id="field_iphotograph"
+                    ng-model="vm.insurancePurchase.iphotograph"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cphotograph">Cphotograph</label>
+            <input type="text" class="form-control" name="cphotograph" id="field_cphotograph"
+                    ng-model="vm.insurancePurchase.cphotograph"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_purchaseTime">Purchase Time</label>
+            <input type="number" class="form-control" name="purchaseTime" id="field_purchaseTime"
+                    ng-model="vm.insurancePurchase.purchaseTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founder">Founder</label>
+            <input type="text" class="form-control" name="founder" id="field_founder"
+                    ng-model="vm.insurancePurchase.founder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founderTime">Founder Time</label>
+            <input type="number" class="form-control" name="founderTime" id="field_founderTime"
+                    ng-model="vm.insurancePurchase.founderTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifier">Modifier</label>
+            <input type="text" class="form-control" name="modifier" id="field_modifier"
+                    ng-model="vm.insurancePurchase.modifier"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifierTime">Modifier Time</label>
+            <input type="number" class="form-control" name="modifierTime" id="field_modifierTime"
+                    ng-model="vm.insurancePurchase.modifierTime"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

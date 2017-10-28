@@ -1,0 +1,80 @@
+<div>
+    <h2>Contract Margin Records</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="contract-margin-record.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Contract Margin Record
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentTime"><span>Payment Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentWay"><span>Payment Way</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentMoney"><span>Payment Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentStatus"><span>Payment Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contractMarginRecord in vm.contractMarginRecords track by contractMarginRecord.id">
+                    <td><a ui-sref="contract-margin-record-detail({id:contractMarginRecord.id})">{{contractMarginRecord.id}}</a></td>
+                    <td>{{contractMarginRecord.driverId}}</td>
+                    <td>{{contractMarginRecord.vehicleId}}</td>
+                    <td>{{contractMarginRecord.companyId}}</td>
+                    <td>{{contractMarginRecord.receiptNumber}}</td>
+                    <td>{{contractMarginRecord.plateNumber}}</td>
+                    <td>{{contractMarginRecord.driverName}}</td>
+                    <td>{{contractMarginRecord.paymentTime}}</td>
+                    <td>{{contractMarginRecord.paymentWay}}</td>
+                    <td>{{contractMarginRecord.paymentMoney}}</td>
+                    <td>{{contractMarginRecord.paymentStatus}}</td>
+                    <td>{{contractMarginRecord.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="contract-margin-record-detail({id:contractMarginRecord.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="contract-margin-record.edit({id:contractMarginRecord.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="contract-margin-record.delete({id:contractMarginRecord.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

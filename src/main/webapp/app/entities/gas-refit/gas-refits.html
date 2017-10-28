@@ -1,0 +1,80 @@
+<div>
+    <h2>Gas Refits</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="gas-refit.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Gas Refit
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refit"><span>Refit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refitRecord"><span>Refit Record</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refitTime"><span>Refit Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refitUnit"><span>Refit Unit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span>Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founder"><span>Founder</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="founderTime"><span>Founder Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifier"><span>Modifier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modifierTime"><span>Modifier Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="gasRefit in vm.gasRefits track by gasRefit.id">
+                    <td><a ui-sref="gas-refit-detail({id:gasRefit.id})">{{gasRefit.id}}</a></td>
+                    <td>{{gasRefit.vehicleId}}</td>
+                    <td>{{gasRefit.refit}}</td>
+                    <td>{{gasRefit.remark}}</td>
+                    <td>{{gasRefit.refitRecord}}</td>
+                    <td>{{gasRefit.refitTime}}</td>
+                    <td>{{gasRefit.refitUnit}}</td>
+                    <td>{{gasRefit.phone}}</td>
+                    <td>{{gasRefit.founder}}</td>
+                    <td>{{gasRefit.founderTime}}</td>
+                    <td>{{gasRefit.modifier}}</td>
+                    <td>{{gasRefit.modifierTime}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="gas-refit-detail({id:gasRefit.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="gas-refit.edit({id:gasRefit.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="gas-refit.delete({id:gasRefit.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

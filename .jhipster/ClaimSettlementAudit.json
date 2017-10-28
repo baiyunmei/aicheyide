@@ -1,0 +1,87 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "claimMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "illegalNaam",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "illegalNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "illegalAccessory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "payment",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "repairAccessory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debt",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "debtAccessory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debtRemark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "actualPayment",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "paymentTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "accountNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentWay",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "serialNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStatus",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171028101336",
+    "entityTableName": "claim_settlement_audit",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

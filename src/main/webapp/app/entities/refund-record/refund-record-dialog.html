@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRefundRecordLabel">Create or edit a Refund Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.refundRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.refundRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.refundRecord.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.refundRecord.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.refundRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.refundRecord.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.refundRecord.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.refundRecord.driverName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refundTime">Refund Time</label>
+            <input type="number" class="form-control" name="refundTime" id="field_refundTime"
+                    ng-model="vm.refundRecord.refundTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_money">Money</label>
+            <input type="number" class="form-control" name="money" id="field_money"
+                    ng-model="vm.refundRecord.money"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_source">Source</label>
+            <input type="text" class="form-control" name="source" id="field_source"
+                    ng-model="vm.refundRecord.source"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_depositStatus">Deposit Status</label>
+            <input type="number" class="form-control" name="depositStatus" id="field_depositStatus"
+                    ng-model="vm.refundRecord.depositStatus"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.refundRecord.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

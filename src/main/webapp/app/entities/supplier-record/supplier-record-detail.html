@@ -1,0 +1,87 @@
+
+<div>
+    <h2><span>Supplier Record</span> {{vm.supplierRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.companyId}}</span>
+        </dd>
+        <dt><span>Mnemonic Code</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.mnemonicCode}}</span>
+        </dd>
+        <dt><span>Supplier Status</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.supplierStatus}}</span>
+        </dd>
+        <dt><span>Supplier Name</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.supplierName}}</span>
+        </dd>
+        <dt><span>Tax Number</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.taxNumber}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.phone}}</span>
+        </dd>
+        <dt><span>Open Bank</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.openBank}}</span>
+        </dd>
+        <dt><span>Bank Account</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.bankAccount}}</span>
+        </dd>
+        <dt><span>Unit Address</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.unitAddress}}</span>
+        </dd>
+        <dt><span>Contact</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.contact}}</span>
+        </dd>
+        <dt><span>Contact Phone</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.contactPhone}}</span>
+        </dd>
+        <dt><span>Paytype</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.paytype}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.modifierTime}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.supplierRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="supplier-record-detail.edit({id:vm.supplierRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

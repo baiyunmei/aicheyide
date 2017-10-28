@@ -1,0 +1,78 @@
+<div>
+    <h2>Driver Mates</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="driver-mate.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Driver Mate
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span>Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sex"><span>Sex</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span>Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="certificateType"><span>Certificate Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="certificatePhone"><span>Certificate Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="location"><span>Location</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="unitName"><span>Unit Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="residentialAddress"><span>Residential Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="unitAddress"><span>Unit Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driverMate in vm.driverMates track by driverMate.id">
+                    <td><a ui-sref="driver-mate-detail({id:driverMate.id})">{{driverMate.id}}</a></td>
+                    <td>{{driverMate.driverId}}</td>
+                    <td>{{driverMate.name}}</td>
+                    <td>{{driverMate.sex}}</td>
+                    <td>{{driverMate.phone}}</td>
+                    <td>{{driverMate.certificateType}}</td>
+                    <td>{{driverMate.certificatePhone}}</td>
+                    <td>{{driverMate.location}}</td>
+                    <td>{{driverMate.unitName}}</td>
+                    <td>{{driverMate.residentialAddress}}</td>
+                    <td>{{driverMate.unitAddress}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="driver-mate-detail({id:driverMate.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-mate.edit({id:driverMate.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="driver-mate.delete({id:driverMate.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

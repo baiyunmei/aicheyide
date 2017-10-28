@@ -1,0 +1,134 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRentalManagementLabel">Create or edit a Rental Management</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.rentalManagement.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rentalManagement.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.rentalManagement.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.rentalManagement.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.rentalManagement.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.rentalManagement.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.rentalManagement.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.rentalManagement.driverName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_rentTime">Rent Time</label>
+            <input type="number" class="form-control" name="rentTime" id="field_rentTime"
+                    ng-model="vm.rentalManagement.rentTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_money">Money</label>
+            <input type="number" class="form-control" name="money" id="field_money"
+                    ng-model="vm.rentalManagement.money"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdue">Overdue</label>
+            <input type="number" class="form-control" name="overdue" id="field_overdue"
+                    ng-model="vm.rentalManagement.overdue"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.rentalManagement.remark"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.rentalManagement.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptDate">Receipt Date</label>
+            <input type="number" class="form-control" name="receiptDate" id="field_receiptDate"
+                    ng-model="vm.rentalManagement.receiptDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nextRentTime">Next Rent Time</label>
+            <input type="number" class="form-control" name="nextRentTime" id="field_nextRentTime"
+                    ng-model="vm.rentalManagement.nextRentTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founder">Founder</label>
+            <input type="text" class="form-control" name="founder" id="field_founder"
+                    ng-model="vm.rentalManagement.founder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founderTime">Founder Time</label>
+            <input type="number" class="form-control" name="founderTime" id="field_founderTime"
+                    ng-model="vm.rentalManagement.founderTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifier">Modifier</label>
+            <input type="text" class="form-control" name="modifier" id="field_modifier"
+                    ng-model="vm.rentalManagement.modifier"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifierTime">Modifier Time</label>
+            <input type="number" class="form-control" name="modifierTime" id="field_modifierTime"
+                    ng-model="vm.rentalManagement.modifierTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_whetherGather">Whether Gather</label>
+            <input type="number" class="form-control" name="whetherGather" id="field_whetherGather"
+                    ng-model="vm.rentalManagement.whetherGather"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

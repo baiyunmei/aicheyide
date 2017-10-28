@@ -1,0 +1,98 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOutDangerRecordLabel">Create or edit a Out Danger Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.outDangerRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.outDangerRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.outDangerRecord.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.outDangerRecord.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.outDangerRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.outDangerRecord.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.outDangerRecord.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.outDangerRecord.driverName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_comeTime">Come Time</label>
+            <input type="number" class="form-control" name="comeTime" id="field_comeTime"
+                    ng-model="vm.outDangerRecord.comeTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_responsibleParty">Responsible Party</label>
+            <input type="number" class="form-control" name="responsibleParty" id="field_responsibleParty"
+                    ng-model="vm.outDangerRecord.responsibleParty"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_oneMoney">One Money</label>
+            <input type="number" class="form-control" name="oneMoney" id="field_oneMoney"
+                    ng-model="vm.outDangerRecord.oneMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_threeMoney">Three Money</label>
+            <input type="number" class="form-control" name="threeMoney" id="field_threeMoney"
+                    ng-model="vm.outDangerRecord.threeMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_repairFactory">Repair Factory</label>
+            <input type="text" class="form-control" name="repairFactory" id="field_repairFactory"
+                    ng-model="vm.outDangerRecord.repairFactory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.outDangerRecord.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

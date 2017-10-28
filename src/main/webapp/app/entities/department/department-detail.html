@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Department</span> {{vm.department.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.department.companyId}}</span>
+        </dd>
+        <dt><span>Department</span></dt>
+        <dd>
+            <span>{{vm.department.department}}</span>
+        </dd>
+        <dt><span>Department Number</span></dt>
+        <dd>
+            <span>{{vm.department.departmentNumber}}</span>
+        </dd>
+        <dt><span>Superior Department Id</span></dt>
+        <dd>
+            <span>{{vm.department.superiorDepartmentId}}</span>
+        </dd>
+        <dt><span>Department Heads</span></dt>
+        <dd>
+            <span>{{vm.department.departmentHeads}}</span>
+        </dd>
+        <dt><span>Department Heads Id</span></dt>
+        <dd>
+            <span>{{vm.department.departmentHeadsId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="department-detail.edit({id:vm.department.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

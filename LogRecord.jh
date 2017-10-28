@@ -1,0 +1,20 @@
+
+entity LogRecord {
+
+id Long,
+operatingType String,
+operator String,
+companyId Long,
+departmentId Long,
+operatorId Long,
+ip String,
+role String,
+operatingDate Long,
+remark String,
+}
+
+paginate LogRecord with pagination
+
+service  LogRecord with serviceImpl
+
+

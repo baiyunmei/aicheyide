@@ -1,0 +1,80 @@
+<div>
+    <h2>Refund Records</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="refund-record.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Refund Record
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="refundTime"><span>Refund Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="money"><span>Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="source"><span>Source</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="depositStatus"><span>Deposit Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="refundRecord in vm.refundRecords track by refundRecord.id">
+                    <td><a ui-sref="refund-record-detail({id:refundRecord.id})">{{refundRecord.id}}</a></td>
+                    <td>{{refundRecord.driverId}}</td>
+                    <td>{{refundRecord.vehicleId}}</td>
+                    <td>{{refundRecord.companyId}}</td>
+                    <td>{{refundRecord.receiptNumber}}</td>
+                    <td>{{refundRecord.plateNumber}}</td>
+                    <td>{{refundRecord.driverName}}</td>
+                    <td>{{refundRecord.refundTime}}</td>
+                    <td>{{refundRecord.money}}</td>
+                    <td>{{refundRecord.source}}</td>
+                    <td>{{refundRecord.depositStatus}}</td>
+                    <td>{{refundRecord.remark}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="refund-record-detail({id:refundRecord.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="refund-record.edit({id:refundRecord.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="refund-record.delete({id:refundRecord.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

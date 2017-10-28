@@ -1,0 +1,140 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClaimSettlementAuditLabel">Create or edit a Claim Settlement Audit</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.claimSettlementAudit.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.claimSettlementAudit.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.claimSettlementAudit.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.claimSettlementAudit.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.claimSettlementAudit.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.claimSettlementAudit.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_claimMoney">Claim Money</label>
+            <input type="number" class="form-control" name="claimMoney" id="field_claimMoney"
+                    ng-model="vm.claimSettlementAudit.claimMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_illegalNaam">Illegal Naam</label>
+            <input type="number" class="form-control" name="illegalNaam" id="field_illegalNaam"
+                    ng-model="vm.claimSettlementAudit.illegalNaam"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_illegalNumber">Illegal Number</label>
+            <input type="text" class="form-control" name="illegalNumber" id="field_illegalNumber"
+                    ng-model="vm.claimSettlementAudit.illegalNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_illegalAccessory">Illegal Accessory</label>
+            <input type="text" class="form-control" name="illegalAccessory" id="field_illegalAccessory"
+                    ng-model="vm.claimSettlementAudit.illegalAccessory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_payment">Payment</label>
+            <input type="number" class="form-control" name="payment" id="field_payment"
+                    ng-model="vm.claimSettlementAudit.payment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_repairAccessory">Repair Accessory</label>
+            <input type="text" class="form-control" name="repairAccessory" id="field_repairAccessory"
+                    ng-model="vm.claimSettlementAudit.repairAccessory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_debt">Debt</label>
+            <input type="number" class="form-control" name="debt" id="field_debt"
+                    ng-model="vm.claimSettlementAudit.debt"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_debtAccessory">Debt Accessory</label>
+            <input type="text" class="form-control" name="debtAccessory" id="field_debtAccessory"
+                    ng-model="vm.claimSettlementAudit.debtAccessory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_debtRemark">Debt Remark</label>
+            <input type="text" class="form-control" name="debtRemark" id="field_debtRemark"
+                    ng-model="vm.claimSettlementAudit.debtRemark"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_actualPayment">Actual Payment</label>
+            <input type="number" class="form-control" name="actualPayment" id="field_actualPayment"
+                    ng-model="vm.claimSettlementAudit.actualPayment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_paymentTime">Payment Time</label>
+            <input type="number" class="form-control" name="paymentTime" id="field_paymentTime"
+                    ng-model="vm.claimSettlementAudit.paymentTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_accountNumber">Account Number</label>
+            <input type="text" class="form-control" name="accountNumber" id="field_accountNumber"
+                    ng-model="vm.claimSettlementAudit.accountNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_paymentWay">Payment Way</label>
+            <input type="number" class="form-control" name="paymentWay" id="field_paymentWay"
+                    ng-model="vm.claimSettlementAudit.paymentWay"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_serialNumber">Serial Number</label>
+            <input type="text" class="form-control" name="serialNumber" id="field_serialNumber"
+                    ng-model="vm.claimSettlementAudit.serialNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditStatus">Audit Status</label>
+            <input type="number" class="form-control" name="auditStatus" id="field_auditStatus"
+                    ng-model="vm.claimSettlementAudit.auditStatus"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

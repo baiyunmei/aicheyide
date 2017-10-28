@@ -1,0 +1,98 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRentVehicleRecordLabel">Create or edit a Rent Vehicle Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.rentVehicleRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rentVehicleRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.rentVehicleRecord.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.rentVehicleRecord.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.rentVehicleRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.rentVehicleRecord.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plateNumber">Plate Number</label>
+            <input type="text" class="form-control" name="plateNumber" id="field_plateNumber"
+                    ng-model="vm.rentVehicleRecord.plateNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverName">Driver Name</label>
+            <input type="text" class="form-control" name="driverName" id="field_driverName"
+                    ng-model="vm.rentVehicleRecord.driverName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.rentVehicleRecord.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contractStartDate">Contract Start Date</label>
+            <input type="number" class="form-control" name="contractStartDate" id="field_contractStartDate"
+                    ng-model="vm.rentVehicleRecord.contractStartDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contractEndDate">Contract End Date</label>
+            <input type="number" class="form-control" name="contractEndDate" id="field_contractEndDate"
+                    ng-model="vm.rentVehicleRecord.contractEndDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_monthlyRent">Monthly Rent</label>
+            <input type="number" class="form-control" name="monthlyRent" id="field_monthlyRent"
+                    ng-model="vm.rentVehicleRecord.monthlyRent"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cashPledge">Cash Pledge</label>
+            <input type="number" class="form-control" name="cashPledge" id="field_cashPledge"
+                    ng-model="vm.rentVehicleRecord.cashPledge"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.rentVehicleRecord.status"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

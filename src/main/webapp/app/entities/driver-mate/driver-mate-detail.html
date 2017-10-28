@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Driver Mate</span> {{vm.driverMate.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.driverMate.driverId}}</span>
+        </dd>
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.driverMate.name}}</span>
+        </dd>
+        <dt><span>Sex</span></dt>
+        <dd>
+            <span>{{vm.driverMate.sex}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.driverMate.phone}}</span>
+        </dd>
+        <dt><span>Certificate Type</span></dt>
+        <dd>
+            <span>{{vm.driverMate.certificateType}}</span>
+        </dd>
+        <dt><span>Certificate Phone</span></dt>
+        <dd>
+            <span>{{vm.driverMate.certificatePhone}}</span>
+        </dd>
+        <dt><span>Location</span></dt>
+        <dd>
+            <span>{{vm.driverMate.location}}</span>
+        </dd>
+        <dt><span>Unit Name</span></dt>
+        <dd>
+            <span>{{vm.driverMate.unitName}}</span>
+        </dd>
+        <dt><span>Residential Address</span></dt>
+        <dd>
+            <span>{{vm.driverMate.residentialAddress}}</span>
+        </dd>
+        <dt><span>Unit Address</span></dt>
+        <dd>
+            <span>{{vm.driverMate.unitAddress}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="driver-mate-detail.edit({id:vm.driverMate.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

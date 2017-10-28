@@ -1,0 +1,158 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrderFromLabel">Create or edit a Order From</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.orderFrom.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.orderFrom.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.orderFrom.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_marketId">Market Id</label>
+            <input type="number" class="form-control" name="marketId" id="field_marketId"
+                    ng-model="vm.orderFrom.marketId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.orderFrom.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_productType">Product Type</label>
+            <input type="text" class="form-control" name="productType" id="field_productType"
+                    ng-model="vm.orderFrom.productType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_fuelType">Fuel Type</label>
+            <input type="text" class="form-control" name="fuelType" id="field_fuelType"
+                    ng-model="vm.orderFrom.fuelType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_brandName">Brand Name</label>
+            <input type="text" class="form-control" name="brandName" id="field_brandName"
+                    ng-model="vm.orderFrom.brandName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                    ng-model="vm.orderFrom.type"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_versions">Versions</label>
+            <input type="number" class="form-control" name="versions" id="field_versions"
+                    ng-model="vm.orderFrom.versions"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_year">Year</label>
+            <input type="text" class="form-control" name="year" id="field_year"
+                    ng-model="vm.orderFrom.year"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refit">Refit</label>
+            <input type="number" class="form-control" name="refit" id="field_refit"
+                    ng-model="vm.orderFrom.refit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_salesPlan">Sales Plan</label>
+            <input type="text" class="form-control" name="salesPlan" id="field_salesPlan"
+                    ng-model="vm.orderFrom.salesPlan"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_salesPlanId">Sales Plan Id</label>
+            <input type="text" class="form-control" name="salesPlanId" id="field_salesPlanId"
+                    ng-model="vm.orderFrom.salesPlanId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_downPayment">Down Payment</label>
+            <input type="number" class="form-control" name="downPayment" id="field_downPayment"
+                    ng-model="vm.orderFrom.downPayment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_monthly">Monthly</label>
+            <input type="number" class="form-control" name="monthly" id="field_monthly"
+                    ng-model="vm.orderFrom.monthly"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_periods">Periods</label>
+            <input type="number" class="form-control" name="periods" id="field_periods"
+                    ng-model="vm.orderFrom.periods"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cashPledge">Cash Pledge</label>
+            <input type="number" class="form-control" name="cashPledge" id="field_cashPledge"
+                    ng-model="vm.orderFrom.cashPledge"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_rent">Rent</label>
+            <input type="number" class="form-control" name="rent" id="field_rent"
+                    ng-model="vm.orderFrom.rent"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_referralsIdNumber">Referrals Id Number</label>
+            <input type="text" class="form-control" name="referralsIdNumber" id="field_referralsIdNumber"
+                    ng-model="vm.orderFrom.referralsIdNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.orderFrom.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.orderFrom.name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_auditStatus">Audit Status</label>
+            <input type="number" class="form-control" name="auditStatus" id="field_auditStatus"
+                    ng-model="vm.orderFrom.auditStatus"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.orderFrom.status"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

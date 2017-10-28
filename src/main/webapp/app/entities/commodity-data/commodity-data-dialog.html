@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCommodityDataLabel">Create or edit a Commodity Data</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.commodityData.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.commodityData.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.commodityData.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_mnemonicCode">Mnemonic Code</label>
+            <input type="text" class="form-control" name="mnemonicCode" id="field_mnemonicCode"
+                    ng-model="vm.commodityData.mnemonicCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_brand">Brand</label>
+            <input type="text" class="form-control" name="brand" id="field_brand"
+                    ng-model="vm.commodityData.brand"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_salesName">Sales Name</label>
+            <input type="text" class="form-control" name="salesName" id="field_salesName"
+                    ng-model="vm.commodityData.salesName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_colour">Colour</label>
+            <input type="text" class="form-control" name="colour" id="field_colour"
+                    ng-model="vm.commodityData.colour"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_size">Size</label>
+            <input type="number" class="form-control" name="size" id="field_size"
+                    ng-model="vm.commodityData.size"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commodityType">Commodity Type</label>
+            <input type="text" class="form-control" name="commodityType" id="field_commodityType"
+                    ng-model="vm.commodityData.commodityType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_normalPrice">Normal Price</label>
+            <input type="number" class="form-control" name="normalPrice" id="field_normalPrice"
+                    ng-model="vm.commodityData.normalPrice"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.commodityData.remark"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.commodityData.status"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

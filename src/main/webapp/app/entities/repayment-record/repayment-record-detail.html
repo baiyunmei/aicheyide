@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span>Repayment Record</span> {{vm.repaymentRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.driverName}}</span>
+        </dd>
+        <dt><span>Repayment Time</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.repaymentTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.money}}</span>
+        </dd>
+        <dt><span>Overdue</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.overdue}}</span>
+        </dd>
+        <dt><span>Periods</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.periods}}</span>
+        </dd>
+        <dt><span>Next Money</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.nextMoney}}</span>
+        </dd>
+        <dt><span>Next Date</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.nextDate}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.remark}}</span>
+        </dd>
+        <dt><span>Operation Time</span></dt>
+        <dd>
+            <span>{{vm.repaymentRecord.operationTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="repayment-record-detail.edit({id:vm.repaymentRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

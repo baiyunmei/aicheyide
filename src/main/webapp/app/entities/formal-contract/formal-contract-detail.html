@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Formal Contract</span> {{vm.formalContract.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.formalContract.orderId}}</span>
+        </dd>
+        <dt><span>Contract Numbering</span></dt>
+        <dd>
+            <span>{{vm.formalContract.contractNumbering}}</span>
+        </dd>
+        <dt><span>Video</span></dt>
+        <dd>
+            <span>{{vm.formalContract.video}}</span>
+        </dd>
+        <dt><span>Credit</span></dt>
+        <dd>
+            <span>{{vm.formalContract.credit}}</span>
+        </dd>
+        <dt><span>Apply</span></dt>
+        <dd>
+            <span>{{vm.formalContract.apply}}</span>
+        </dd>
+        <dt><span>Special</span></dt>
+        <dd>
+            <span>{{vm.formalContract.special}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="formal-contract-detail.edit({id:vm.formalContract.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

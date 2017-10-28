@@ -1,0 +1,152 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOverdueGatheringLabel">Create or edit a Overdue Gathering</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.overdueGathering.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.overdueGathering.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_driverId">Driver Id</label>
+            <input type="number" class="form-control" name="driverId" id="field_driverId"
+                    ng-model="vm.overdueGathering.driverId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.overdueGathering.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.overdueGathering.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.overdueGathering.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_repaymentTime">Repayment Time</label>
+            <input type="number" class="form-control" name="repaymentTime" id="field_repaymentTime"
+                    ng-model="vm.overdueGathering.repaymentTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdueAwait">Overdue Await</label>
+            <input type="number" class="form-control" name="overdueAwait" id="field_overdueAwait"
+                    ng-model="vm.overdueGathering.overdueAwait"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdueInterest">Overdue Interest</label>
+            <input type="number" class="form-control" name="overdueInterest" id="field_overdueInterest"
+                    ng-model="vm.overdueGathering.overdueInterest"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_overdueData">Overdue Data</label>
+            <input type="number" class="form-control" name="overdueData" id="field_overdueData"
+                    ng-model="vm.overdueGathering.overdueData"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_total">Total</label>
+            <input type="number" class="form-control" name="total" id="field_total"
+                    ng-model="vm.overdueGathering.total"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptNumber">Receipt Number</label>
+            <input type="text" class="form-control" name="receiptNumber" id="field_receiptNumber"
+                    ng-model="vm.overdueGathering.receiptNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_receiptDate">Receipt Date</label>
+            <input type="number" class="form-control" name="receiptDate" id="field_receiptDate"
+                    ng-model="vm.overdueGathering.receiptDate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_practicalMoney">Practical Money</label>
+            <input type="number" class="form-control" name="practicalMoney" id="field_practicalMoney"
+                    ng-model="vm.overdueGathering.practicalMoney"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_paymentWay">Payment Way</label>
+            <input type="number" class="form-control" name="paymentWay" id="field_paymentWay"
+                    ng-model="vm.overdueGathering.paymentWay"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark1">Remark 1</label>
+            <input type="text" class="form-control" name="remark1" id="field_remark1"
+                    ng-model="vm.overdueGathering.remark1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founder">Founder</label>
+            <input type="text" class="form-control" name="founder" id="field_founder"
+                    ng-model="vm.overdueGathering.founder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founderTime">Founder Time</label>
+            <input type="number" class="form-control" name="founderTime" id="field_founderTime"
+                    ng-model="vm.overdueGathering.founderTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifier">Modifier</label>
+            <input type="text" class="form-control" name="modifier" id="field_modifier"
+                    ng-model="vm.overdueGathering.modifier"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifierTime">Modifier Time</label>
+            <input type="number" class="form-control" name="modifierTime" id="field_modifierTime"
+                    ng-model="vm.overdueGathering.modifierTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_gathering">Gathering</label>
+            <input type="number" class="form-control" name="gathering" id="field_gathering"
+                    ng-model="vm.overdueGathering.gathering"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_gatherTime">Gather Time</label>
+            <input type="number" class="form-control" name="gatherTime" id="field_gatherTime"
+                    ng-model="vm.overdueGathering.gatherTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark2">Remark 2</label>
+            <input type="text" class="form-control" name="remark2" id="field_remark2"
+                    ng-model="vm.overdueGathering.remark2"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

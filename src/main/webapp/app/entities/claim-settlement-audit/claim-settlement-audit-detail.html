@@ -1,0 +1,95 @@
+
+<div>
+    <h2><span>Claim Settlement Audit</span> {{vm.claimSettlementAudit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.driverId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.orderId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.vehicleId}}</span>
+        </dd>
+        <dt><span>Claim Money</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.claimMoney}}</span>
+        </dd>
+        <dt><span>Illegal Naam</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.illegalNaam}}</span>
+        </dd>
+        <dt><span>Illegal Number</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.illegalNumber}}</span>
+        </dd>
+        <dt><span>Illegal Accessory</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.illegalAccessory}}</span>
+        </dd>
+        <dt><span>Payment</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.payment}}</span>
+        </dd>
+        <dt><span>Repair Accessory</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.repairAccessory}}</span>
+        </dd>
+        <dt><span>Debt</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.debt}}</span>
+        </dd>
+        <dt><span>Debt Accessory</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.debtAccessory}}</span>
+        </dd>
+        <dt><span>Debt Remark</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.debtRemark}}</span>
+        </dd>
+        <dt><span>Actual Payment</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.actualPayment}}</span>
+        </dd>
+        <dt><span>Payment Time</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.paymentTime}}</span>
+        </dd>
+        <dt><span>Account Number</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.accountNumber}}</span>
+        </dd>
+        <dt><span>Payment Way</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.paymentWay}}</span>
+        </dd>
+        <dt><span>Serial Number</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.serialNumber}}</span>
+        </dd>
+        <dt><span>Audit Status</span></dt>
+        <dd>
+            <span>{{vm.claimSettlementAudit.auditStatus}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="claim-settlement-audit-detail.edit({id:vm.claimSettlementAudit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

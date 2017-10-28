@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span>Rent Vehicle Record</span> {{vm.rentVehicleRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.companyId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.driverName}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.phone}}</span>
+        </dd>
+        <dt><span>Contract Start Date</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.contractStartDate}}</span>
+        </dd>
+        <dt><span>Contract End Date</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.contractEndDate}}</span>
+        </dd>
+        <dt><span>Monthly Rent</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.monthlyRent}}</span>
+        </dd>
+        <dt><span>Cash Pledge</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.cashPledge}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.rentVehicleRecord.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="rent-vehicle-record-detail.edit({id:vm.rentVehicleRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

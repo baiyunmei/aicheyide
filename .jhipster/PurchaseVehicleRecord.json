@@ -1,0 +1,10 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "changelogDate": "20171027044247",
+    "entityTableName": "purchase_vehicle_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

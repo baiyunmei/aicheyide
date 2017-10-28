@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "registered",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "marriage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "site",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "communicate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agreement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankCard",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027090549",
+    "entityTableName": "additional_materials",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

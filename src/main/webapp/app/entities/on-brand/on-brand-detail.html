@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>On Brand</span> {{vm.onBrand.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.onBrand.vehicleId}}</span>
+        </dd>
+        <dt><span>Gpsdevice</span></dt>
+        <dd>
+            <span>{{vm.onBrand.gpsdevice}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.onBrand.remark}}</span>
+        </dd>
+        <dt><span>Gps Install</span></dt>
+        <dd>
+            <span>{{vm.onBrand.gpsInstall}}</span>
+        </dd>
+        <dt><span>Install Time</span></dt>
+        <dd>
+            <span>{{vm.onBrand.installTime}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.onBrand.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.onBrand.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.onBrand.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.onBrand.modifierTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="on-brand-detail.edit({id:vm.onBrand.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

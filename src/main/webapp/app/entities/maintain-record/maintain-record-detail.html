@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span>Maintain Record</span> {{vm.maintainRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.driverId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.companyId}}</span>
+        </dd>
+        <dt><span>Maintain Number</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.maintainNumber}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.driverName}}</span>
+        </dd>
+        <dt><span>Maintain Time</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.maintainTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.money}}</span>
+        </dd>
+        <dt><span>Repair Factory</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.repairFactory}}</span>
+        </dd>
+        <dt><span>Leave Factory Time</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.leaveFactoryTime}}</span>
+        </dd>
+        <dt><span>Maintain Sky</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.maintainSky}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.maintainRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="maintain-record-detail.edit({id:vm.maintainRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Driver Emergency Contact</span> {{vm.driverEmergencyContact.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Name 1</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.name1}}</span>
+        </dd>
+        <dt><span>Residential Address 1</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.residentialAddress1}}</span>
+        </dd>
+        <dt><span>Phone 1</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.phone1}}</span>
+        </dd>
+        <dt><span>Relation 1</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.relation1}}</span>
+        </dd>
+        <dt><span>Name 2</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.name2}}</span>
+        </dd>
+        <dt><span>Residential Address 2</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.residentialAddress2}}</span>
+        </dd>
+        <dt><span>Phone 2</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.phone2}}</span>
+        </dd>
+        <dt><span>Relation 2</span></dt>
+        <dd>
+            <span>{{vm.driverEmergencyContact.relation2}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="driver-emergency-contact-detail.edit({id:vm.driverEmergencyContact.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

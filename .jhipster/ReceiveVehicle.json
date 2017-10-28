@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "informVehicleTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "informData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "informVehicleDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parkWarehouse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founderTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modifier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifierTime",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20171028112048",
+    "entityTableName": "receive_vehicle",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity CompanyMessage.
+    -->
+    <changeSet id="20171026092106-1" author="jhipster">
+        <createTable tableName="company_message">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="company_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="company_logo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="company_principal_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="company_principal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="company_principalphone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="site" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="account_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="opening_bank" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="phone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tax_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="referrals" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="referrals_phone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="referrals_authorization_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="authorization_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="authorization_company_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="status" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

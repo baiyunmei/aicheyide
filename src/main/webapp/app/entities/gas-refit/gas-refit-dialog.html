@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGasRefitLabel">Create or edit a Gas Refit</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.gasRefit.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.gasRefit.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_vehicleId">Vehicle Id</label>
+            <input type="number" class="form-control" name="vehicleId" id="field_vehicleId"
+                    ng-model="vm.gasRefit.vehicleId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refit">Refit</label>
+            <input type="number" class="form-control" name="refit" id="field_refit"
+                    ng-model="vm.gasRefit.refit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.gasRefit.remark"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refitRecord">Refit Record</label>
+            <input type="text" class="form-control" name="refitRecord" id="field_refitRecord"
+                    ng-model="vm.gasRefit.refitRecord"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refitTime">Refit Time</label>
+            <input type="number" class="form-control" name="refitTime" id="field_refitTime"
+                    ng-model="vm.gasRefit.refitTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refitUnit">Refit Unit</label>
+            <input type="text" class="form-control" name="refitUnit" id="field_refitUnit"
+                    ng-model="vm.gasRefit.refitUnit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.gasRefit.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founder">Founder</label>
+            <input type="text" class="form-control" name="founder" id="field_founder"
+                    ng-model="vm.gasRefit.founder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founderTime">Founder Time</label>
+            <input type="number" class="form-control" name="founderTime" id="field_founderTime"
+                    ng-model="vm.gasRefit.founderTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifier">Modifier</label>
+            <input type="text" class="form-control" name="modifier" id="field_modifier"
+                    ng-model="vm.gasRefit.modifier"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifierTime">Modifier Time</label>
+            <input type="number" class="form-control" name="modifierTime" id="field_modifierTime"
+                    ng-model="vm.gasRefit.modifierTime"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

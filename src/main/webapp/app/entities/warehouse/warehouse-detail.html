@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Warehouse</span> {{vm.warehouse.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.warehouse.companyId}}</span>
+        </dd>
+        <dt><span>Mnemonic Code</span></dt>
+        <dd>
+            <span>{{vm.warehouse.mnemonicCode}}</span>
+        </dd>
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.warehouse.name}}</span>
+        </dd>
+        <dt><span>Site</span></dt>
+        <dd>
+            <span>{{vm.warehouse.site}}</span>
+        </dd>
+        <dt><span>Principal</span></dt>
+        <dd>
+            <span>{{vm.warehouse.principal}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.warehouse.phone}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.warehouse.remark}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.warehouse.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="warehouse-detail.edit({id:vm.warehouse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

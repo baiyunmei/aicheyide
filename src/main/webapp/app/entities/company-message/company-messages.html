@@ -1,0 +1,90 @@
+<div>
+    <h2>Company Messages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="company-message.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Company Message
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyName"><span>Company Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyLogo"><span>Company Logo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyPrincipalId"><span>Company Principal Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyPrincipal"><span>Company Principal</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyPrincipalphone"><span>Company Principalphone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="site"><span>Site</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="accountName"><span>Account Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="openingBank"><span>Opening Bank</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phone"><span>Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="taxNumber"><span>Tax Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="referrals"><span>Referrals</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="referralsPhone"><span>Referrals Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="referralsAuthorizationId"><span>Referrals Authorization Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationId"><span>Authorization Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="authorizationCompanyName"><span>Authorization Company Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="companyMessage in vm.companyMessages track by companyMessage.id">
+                    <td><a ui-sref="company-message-detail({id:companyMessage.id})">{{companyMessage.id}}</a></td>
+                    <td>{{companyMessage.companyName}}</td>
+                    <td>{{companyMessage.companyLogo}}</td>
+                    <td>{{companyMessage.companyPrincipalId}}</td>
+                    <td>{{companyMessage.companyPrincipal}}</td>
+                    <td>{{companyMessage.companyPrincipalphone}}</td>
+                    <td>{{companyMessage.site}}</td>
+                    <td>{{companyMessage.accountName}}</td>
+                    <td>{{companyMessage.openingBank}}</td>
+                    <td>{{companyMessage.phone}}</td>
+                    <td>{{companyMessage.taxNumber}}</td>
+                    <td>{{companyMessage.referrals}}</td>
+                    <td>{{companyMessage.referralsPhone}}</td>
+                    <td>{{companyMessage.referralsAuthorizationId}}</td>
+                    <td>{{companyMessage.authorizationId}}</td>
+                    <td>{{companyMessage.authorizationCompanyName}}</td>
+                    <td>{{companyMessage.status}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="company-message-detail({id:companyMessage.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company-message.edit({id:companyMessage.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company-message.delete({id:companyMessage.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

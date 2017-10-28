@@ -1,0 +1,128 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySupplierRecordLabel">Create or edit a Supplier Record</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.supplierRecord.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.supplierRecord.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_companyId">Company Id</label>
+            <input type="number" class="form-control" name="companyId" id="field_companyId"
+                    ng-model="vm.supplierRecord.companyId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_mnemonicCode">Mnemonic Code</label>
+            <input type="text" class="form-control" name="mnemonicCode" id="field_mnemonicCode"
+                    ng-model="vm.supplierRecord.mnemonicCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_supplierStatus">Supplier Status</label>
+            <input type="number" class="form-control" name="supplierStatus" id="field_supplierStatus"
+                    ng-model="vm.supplierRecord.supplierStatus"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_supplierName">Supplier Name</label>
+            <input type="text" class="form-control" name="supplierName" id="field_supplierName"
+                    ng-model="vm.supplierRecord.supplierName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_taxNumber">Tax Number</label>
+            <input type="text" class="form-control" name="taxNumber" id="field_taxNumber"
+                    ng-model="vm.supplierRecord.taxNumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.supplierRecord.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_openBank">Open Bank</label>
+            <input type="text" class="form-control" name="openBank" id="field_openBank"
+                    ng-model="vm.supplierRecord.openBank"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bankAccount">Bank Account</label>
+            <input type="text" class="form-control" name="bankAccount" id="field_bankAccount"
+                    ng-model="vm.supplierRecord.bankAccount"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_unitAddress">Unit Address</label>
+            <input type="text" class="form-control" name="unitAddress" id="field_unitAddress"
+                    ng-model="vm.supplierRecord.unitAddress"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contact">Contact</label>
+            <input type="text" class="form-control" name="contact" id="field_contact"
+                    ng-model="vm.supplierRecord.contact"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contactPhone">Contact Phone</label>
+            <input type="text" class="form-control" name="contactPhone" id="field_contactPhone"
+                    ng-model="vm.supplierRecord.contactPhone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_paytype">Paytype</label>
+            <input type="number" class="form-control" name="paytype" id="field_paytype"
+                    ng-model="vm.supplierRecord.paytype"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founder">Founder</label>
+            <input type="text" class="form-control" name="founder" id="field_founder"
+                    ng-model="vm.supplierRecord.founder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_founderTime">Founder Time</label>
+            <input type="number" class="form-control" name="founderTime" id="field_founderTime"
+                    ng-model="vm.supplierRecord.founderTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifier">Modifier</label>
+            <input type="text" class="form-control" name="modifier" id="field_modifier"
+                    ng-model="vm.supplierRecord.modifier"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_modifierTime">Modifier Time</label>
+            <input type="number" class="form-control" name="modifierTime" id="field_modifierTime"
+                    ng-model="vm.supplierRecord.modifierTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_remark">Remark</label>
+            <input type="text" class="form-control" name="remark" id="field_remark"
+                    ng-model="vm.supplierRecord.remark"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

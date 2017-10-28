@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "viBeginDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "viFinishDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ciBeginDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ciFinishDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027070943",
+    "entityTableName": "policy_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

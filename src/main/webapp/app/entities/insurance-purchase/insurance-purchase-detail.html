@@ -1,0 +1,103 @@
+
+<div>
+    <h2><span>Insurance Purchase</span> {{vm.insurancePurchase.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.vehicleId}}</span>
+        </dd>
+        <dt><span>Insurance Company</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.insuranceCompany}}</span>
+        </dd>
+        <dt><span>Insurance Money</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.insuranceMoney}}</span>
+        </dd>
+        <dt><span>Policy Number</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.policyNumber}}</span>
+        </dd>
+        <dt><span>Ibegin Date</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.ibeginDate}}</span>
+        </dd>
+        <dt><span>Ifinish Date</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.ifinishDate}}</span>
+        </dd>
+        <dt><span>Icompany Name</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.icompanyName}}</span>
+        </dd>
+        <dt><span>Commercial Company</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.commercialCompany}}</span>
+        </dd>
+        <dt><span>Commercial Money</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.commercialMoney}}</span>
+        </dd>
+        <dt><span>Commercial Number</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.commercialNumber}}</span>
+        </dd>
+        <dt><span>Cbegin Date</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.cbeginDate}}</span>
+        </dd>
+        <dt><span>Cfinish Date</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.cfinishDate}}</span>
+        </dd>
+        <dt><span>Ccompany Name</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.ccompanyName}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.remark}}</span>
+        </dd>
+        <dt><span>Iphotograph</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.iphotograph}}</span>
+        </dd>
+        <dt><span>Cphotograph</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.cphotograph}}</span>
+        </dd>
+        <dt><span>Purchase Time</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.purchaseTime}}</span>
+        </dd>
+        <dt><span>Founder</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.founder}}</span>
+        </dd>
+        <dt><span>Founder Time</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.founderTime}}</span>
+        </dd>
+        <dt><span>Modifier</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.modifier}}</span>
+        </dd>
+        <dt><span>Modifier Time</span></dt>
+        <dd>
+            <span>{{vm.insurancePurchase.modifierTime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="insurance-purchase-detail.edit({id:vm.insurancePurchase.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

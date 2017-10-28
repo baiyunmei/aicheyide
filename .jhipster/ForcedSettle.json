@@ -1,0 +1,71 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "periods",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sumMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "notPeriods",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "notMoney",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "settleType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "receiptDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "whetherRecycle",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171028035753",
+    "entityTableName": "forced_settle",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

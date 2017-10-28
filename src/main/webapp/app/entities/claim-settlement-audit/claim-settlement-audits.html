@@ -1,0 +1,96 @@
+<div>
+    <h2>Claim Settlement Audits</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="claim-settlement-audit.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Claim Settlement Audit
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderId"><span>Order Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="claimMoney"><span>Claim Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="illegalNaam"><span>Illegal Naam</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="illegalNumber"><span>Illegal Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="illegalAccessory"><span>Illegal Accessory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="payment"><span>Payment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="repairAccessory"><span>Repair Accessory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="debt"><span>Debt</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="debtAccessory"><span>Debt Accessory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="debtRemark"><span>Debt Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="actualPayment"><span>Actual Payment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentTime"><span>Payment Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="accountNumber"><span>Account Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentWay"><span>Payment Way</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="serialNumber"><span>Serial Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="auditStatus"><span>Audit Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="claimSettlementAudit in vm.claimSettlementAudits track by claimSettlementAudit.id">
+                    <td><a ui-sref="claim-settlement-audit-detail({id:claimSettlementAudit.id})">{{claimSettlementAudit.id}}</a></td>
+                    <td>{{claimSettlementAudit.driverId}}</td>
+                    <td>{{claimSettlementAudit.orderId}}</td>
+                    <td>{{claimSettlementAudit.companyId}}</td>
+                    <td>{{claimSettlementAudit.vehicleId}}</td>
+                    <td>{{claimSettlementAudit.claimMoney}}</td>
+                    <td>{{claimSettlementAudit.illegalNaam}}</td>
+                    <td>{{claimSettlementAudit.illegalNumber}}</td>
+                    <td>{{claimSettlementAudit.illegalAccessory}}</td>
+                    <td>{{claimSettlementAudit.payment}}</td>
+                    <td>{{claimSettlementAudit.repairAccessory}}</td>
+                    <td>{{claimSettlementAudit.debt}}</td>
+                    <td>{{claimSettlementAudit.debtAccessory}}</td>
+                    <td>{{claimSettlementAudit.debtRemark}}</td>
+                    <td>{{claimSettlementAudit.actualPayment}}</td>
+                    <td>{{claimSettlementAudit.paymentTime}}</td>
+                    <td>{{claimSettlementAudit.accountNumber}}</td>
+                    <td>{{claimSettlementAudit.paymentWay}}</td>
+                    <td>{{claimSettlementAudit.serialNumber}}</td>
+                    <td>{{claimSettlementAudit.auditStatus}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="claim-settlement-audit-detail({id:claimSettlementAudit.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="claim-settlement-audit.edit({id:claimSettlementAudit.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="claim-settlement-audit.delete({id:claimSettlementAudit.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

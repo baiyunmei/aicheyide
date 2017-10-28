@@ -1,0 +1,86 @@
+<div>
+    <h2>Repayment Records</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="repayment-record.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Repayment Record
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="repaymentTime"><span>Repayment Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="money"><span>Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="overdue"><span>Overdue</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="periods"><span>Periods</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nextMoney"><span>Next Money</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nextDate"><span>Next Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operationTime"><span>Operation Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="repaymentRecord in vm.repaymentRecords track by repaymentRecord.id">
+                    <td><a ui-sref="repayment-record-detail({id:repaymentRecord.id})">{{repaymentRecord.id}}</a></td>
+                    <td>{{repaymentRecord.driverId}}</td>
+                    <td>{{repaymentRecord.vehicleId}}</td>
+                    <td>{{repaymentRecord.companyId}}</td>
+                    <td>{{repaymentRecord.receiptNumber}}</td>
+                    <td>{{repaymentRecord.plateNumber}}</td>
+                    <td>{{repaymentRecord.driverName}}</td>
+                    <td>{{repaymentRecord.repaymentTime}}</td>
+                    <td>{{repaymentRecord.money}}</td>
+                    <td>{{repaymentRecord.overdue}}</td>
+                    <td>{{repaymentRecord.periods}}</td>
+                    <td>{{repaymentRecord.nextMoney}}</td>
+                    <td>{{repaymentRecord.nextDate}}</td>
+                    <td>{{repaymentRecord.remark}}</td>
+                    <td>{{repaymentRecord.operationTime}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="repayment-record-detail({id:repaymentRecord.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="repayment-record.edit({id:repaymentRecord.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="repayment-record.delete({id:repaymentRecord.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

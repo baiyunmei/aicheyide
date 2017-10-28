@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity InsurancePurchase.
+    -->
+    <changeSet id="20171028110931-1" author="jhipster">
+        <createTable tableName="insurance_purchase">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="vehicle_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="insurance_company" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="insurance_money" type="decimal(10,2)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="policy_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ibegin_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ifinish_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="icompany_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="commercial_company" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="commercial_money" type="decimal(10,2)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="commercial_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cbegin_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cfinish_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ccompany_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="remark" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="iphotograph" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cphotograph" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="purchase_time" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="founder" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="founder_time" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="modifier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="modifier_time" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

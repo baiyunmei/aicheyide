@@ -1,0 +1,99 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "marketId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "productType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fuelType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brandName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "versions",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "refit",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "salesPlan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salesPlanId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "downPayment",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "monthly",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "periods",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "cashPledge",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "rent",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "referralsIdNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171027083831",
+    "entityTableName": "order_from",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

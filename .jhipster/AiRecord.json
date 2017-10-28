@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "driverId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "receiptNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plateNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aiDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nextAiDate",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "aiConductor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "money",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027071732",
+    "entityTableName": "ai_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span>Monthly Management</span> {{vm.monthlyManagement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.driverId}}</span>
+        </dd>
+        <dt><span>Order Id</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.orderId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.companyId}}</span>
+        </dd>
+        <dt><span>Driver Name</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.driverName}}</span>
+        </dd>
+        <dt><span>Bank Account</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.bankAccount}}</span>
+        </dd>
+        <dt><span>Repayment Time</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.repaymentTime}}</span>
+        </dd>
+        <dt><span>Money</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.money}}</span>
+        </dd>
+        <dt><span>Overdue</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.overdue}}</span>
+        </dd>
+        <dt><span>Periods</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.periods}}</span>
+        </dd>
+        <dt><span>Next Money</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.nextMoney}}</span>
+        </dd>
+        <dt><span>Next Date</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.nextDate}}</span>
+        </dd>
+        <dt><span>Periods Status</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.periodsStatus}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.monthlyManagement.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="monthly-management-detail.edit({id:vm.monthlyManagement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

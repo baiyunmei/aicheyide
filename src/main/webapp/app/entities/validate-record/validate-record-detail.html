@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span>Validate Record</span> {{vm.validateRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.driverId}}</span>
+        </dd>
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.companyId}}</span>
+        </dd>
+        <dt><span>Vehicle Id</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.vehicleId}}</span>
+        </dd>
+        <dt><span>Receipt Number</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.receiptNumber}}</span>
+        </dd>
+        <dt><span>Receipt Date</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.receiptDate}}</span>
+        </dd>
+        <dt><span>Operating Date</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.operatingDate}}</span>
+        </dd>
+        <dt><span>Plate Number</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.plateNumber}}</span>
+        </dd>
+        <dt><span>Validate Time</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.validateTime}}</span>
+        </dd>
+        <dt><span>Kilometre</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.kilometre}}</span>
+        </dd>
+        <dt><span>Damage</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.damage}}</span>
+        </dd>
+        <dt><span>Describes</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.describes}}</span>
+        </dd>
+        <dt><span>Damagep Icture</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.damagepIcture}}</span>
+        </dd>
+        <dt><span>Remark</span></dt>
+        <dd>
+            <span>{{vm.validateRecord.remark}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="validate-record-detail.edit({id:vm.validateRecord.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

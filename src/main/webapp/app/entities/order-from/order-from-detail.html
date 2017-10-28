@@ -1,0 +1,107 @@
+
+<div>
+    <h2><span>Order From</span> {{vm.orderFrom.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Company Id</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.companyId}}</span>
+        </dd>
+        <dt><span>Market Id</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.marketId}}</span>
+        </dd>
+        <dt><span>Driver Id</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.driverId}}</span>
+        </dd>
+        <dt><span>Product Type</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.productType}}</span>
+        </dd>
+        <dt><span>Fuel Type</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.fuelType}}</span>
+        </dd>
+        <dt><span>Brand Name</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.brandName}}</span>
+        </dd>
+        <dt><span>Type</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.type}}</span>
+        </dd>
+        <dt><span>Versions</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.versions}}</span>
+        </dd>
+        <dt><span>Year</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.year}}</span>
+        </dd>
+        <dt><span>Refit</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.refit}}</span>
+        </dd>
+        <dt><span>Sales Plan</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.salesPlan}}</span>
+        </dd>
+        <dt><span>Sales Plan Id</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.salesPlanId}}</span>
+        </dd>
+        <dt><span>Down Payment</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.downPayment}}</span>
+        </dd>
+        <dt><span>Monthly</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.monthly}}</span>
+        </dd>
+        <dt><span>Periods</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.periods}}</span>
+        </dd>
+        <dt><span>Cash Pledge</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.cashPledge}}</span>
+        </dd>
+        <dt><span>Rent</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.rent}}</span>
+        </dd>
+        <dt><span>Referrals Id Number</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.referralsIdNumber}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.phone}}</span>
+        </dd>
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.name}}</span>
+        </dd>
+        <dt><span>Audit Status</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.auditStatus}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.orderFrom.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="order-from-detail.edit({id:vm.orderFrom.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

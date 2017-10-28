@@ -1,0 +1,84 @@
+<div>
+    <h2>Settle Applies</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="settle-apply.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Settle Apply
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverId"><span>Driver Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleId"><span>Vehicle Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span>Company Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="plateNumber"><span>Plate Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="driverName"><span>Driver Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="settleType"><span>Settle Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptNumber"><span>Receipt Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="receiptDate"><span>Receipt Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deductMarks"><span>Deduct Marks</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fine"><span>Fine</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pending"><span>Pending</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remark"><span>Remark</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="settleApply in vm.settleApplies track by settleApply.id">
+                    <td><a ui-sref="settle-apply-detail({id:settleApply.id})">{{settleApply.id}}</a></td>
+                    <td>{{settleApply.driverId}}</td>
+                    <td>{{settleApply.vehicleId}}</td>
+                    <td>{{settleApply.companyId}}</td>
+                    <td>{{settleApply.plateNumber}}</td>
+                    <td>{{settleApply.driverName}}</td>
+                    <td>{{settleApply.settleType}}</td>
+                    <td>{{settleApply.receiptNumber}}</td>
+                    <td>{{settleApply.receiptDate}}</td>
+                    <td>{{settleApply.deductMarks}}</td>
+                    <td>{{settleApply.fine}}</td>
+                    <td>{{settleApply.pending}}</td>
+                    <td>{{settleApply.remark}}</td>
+                    <td>{{settleApply.status}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="settle-apply-detail({id:settleApply.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="settle-apply.edit({id:settleApply.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="settle-apply.delete({id:settleApply.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
